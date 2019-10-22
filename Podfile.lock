@@ -1,0 +1,156 @@
+PODS:
+  - Alamofire (4.9.0)
+  - Differentiator (3.1.0)
+  - Kingfisher (4.10.1)
+  - MBProgressHUD (1.1.0)
+  - MGAPIService (0.6.0):
+    - ObjectMapper (~> 3.3)
+    - RxAlamofire (~> 4.4)
+    - RxAtomic (~> 4.4)
+    - RxSwift (~> 4.4)
+  - MGArchitecture (0.4.4):
+    - RxAtomic (~> 4.4)
+    - RxCocoa (~> 4.4)
+    - RxSwift (~> 4.4)
+  - MGLoadMore (0.3.0):
+    - MJRefresh (~> 3.1)
+    - RxAtomic (~> 4.4)
+    - RxCocoa (~> 4.4)
+    - RxSwift (~> 4.4)
+  - MJRefresh (3.2.0)
+  - Mockingjay (2.0.1):
+    - Mockingjay/Core (= 2.0.1)
+    - Mockingjay/XCTest (= 2.0.1)
+  - Mockingjay/Core (2.0.1)
+  - Mockingjay/XCTest (2.0.1):
+    - Mockingjay/Core
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - ObjectMapper (3.5.1)
+  - OrderedSet (5.0.0)
+  - Realm (3.20.0):
+    - Realm/Headers (= 3.20.0)
+  - Realm/Headers (3.20.0)
+  - RealmSwift (3.20.0):
+    - Realm (= 3.20.0)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
+  - RxAlamofire (4.4.1):
+    - RxAlamofire/Core (= 4.4.1)
+  - RxAlamofire/Core (4.4.1):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 4.5)
+  - RxAtomic (4.4.2)
+  - RxBlocking (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.6):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
+  - SDWebImage (5.2.3):
+    - SDWebImage/Core (= 5.2.3)
+  - SDWebImage/Core (5.2.3)
+  - SVProgressHUD (2.2.5)
+  - Then (2.6.0)
+  - Validator (3.2.1)
+
+DEPENDENCIES:
+  - Kingfisher
+  - MBProgressHUD
+  - MGAPIService
+  - MGArchitecture
+  - MGLoadMore
+  - Mockingjay (from `https://github.com/anhnc55/Mockingjay.git`, branch `swift_5`)
+  - "NSObject+Rx"
+  - ObjectMapper
+  - OrderedSet
+  - RealmSwift
+  - Reusable
+  - RxBlocking (= 4.5)
+  - RxCocoa
+  - RxDataSources
+  - RxRealm
+  - RxSwift
+  - SDWebImage
+  - SVProgressHUD
+  - Then
+  - Validator
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Differentiator
+    - Kingfisher
+    - MBProgressHUD
+    - MGAPIService
+    - MGArchitecture
+    - MGLoadMore
+    - MJRefresh
+    - "NSObject+Rx"
+    - ObjectMapper
+    - OrderedSet
+    - Realm
+    - RealmSwift
+    - Reusable
+    - RxAlamofire
+    - RxAtomic
+    - RxBlocking
+    - RxCocoa
+    - RxDataSources
+    - RxRealm
+    - RxSwift
+    - SDWebImage
+    - SVProgressHUD
+    - Then
+    - Validator
+
+EXTERNAL SOURCES:
+  Mockingjay:
+    :branch: swift_5
+    :git: https://github.com/anhnc55/Mockingjay.git
+
+CHECKOUT OPTIONS:
+  Mockingjay:
+    :commit: 118547353bbeff72e0348e8a2f45e5a19b4d8096
+    :git: https://github.com/anhnc55/Mockingjay.git
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MGAPIService: ed39f871bb02eb0d124fde3914a06e8bb48a116f
+  MGArchitecture: 99b031273f4088eab1e1eaca9a8912aadd2e7f01
+  MGLoadMore: e8943ffd39d51f67089d911e0113254e34f28122
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  Mockingjay: 0660815ee4907b2f0c1ac988126061bb3e19b7aa
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
+  Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
+  RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
+  RxAlamofire: ed65f451f5a9a59419b0b9e705043dc01410edd9
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxRealm: 5379eddd74f8d617ca7681d1f8d144af25b432b0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SDWebImage: 46a7f73228f84ce80990c786e4372cf4db5875ce
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
+  Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
+
+PODFILE CHECKSUM: d7a0564bed1d9b9fdbdc559203dd1fa62af4bb9b
+
+COCOAPODS: 1.8.4
