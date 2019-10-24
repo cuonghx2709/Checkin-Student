@@ -6,7 +6,9 @@
 //  Copyright © 2019 Sun*. All rights reserved.
 //
 
-final class MainViewController: UITabBarController, BindableType {
+import ESTabBarController_swift
+
+final class MainViewController: ESTabBarController, BindableType {
     
     // MARK: - Propeties
     var viewModel: MainViewModel!
@@ -14,6 +16,12 @@ final class MainViewController: UITabBarController, BindableType {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     deinit {
@@ -24,6 +32,11 @@ final class MainViewController: UITabBarController, BindableType {
     func bindViewModel() {
         
     }
+    
+    private func configView() {
+        
+    }
+    
 }
 
 extension MainViewController: StoryboardSceneBased {

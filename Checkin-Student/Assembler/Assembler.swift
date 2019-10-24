@@ -10,9 +10,9 @@ protocol Assembler: class,
     MainAssembler,
     CheckinAssembler,
     MyCourseAssembler,
+    AccountAssembler,
     AppAssembler {
     
 }
 
-final class DefaultAssembler: Assembler {
-}
+final class DefaultAssembler: Assembler { }

@@ -7,8 +7,8 @@
 //
 
 struct AccountViewModel {
-    let usecase: AccountUseCaseType
     let navigator: AccountNavigatorType
+    let usecase: AccountUseCaseType
 }
 
 extension AccountViewModel: ViewModelType {
