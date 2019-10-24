@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ESTabBarController_swift
 
 protocol MainAssembler {
     func resolve(navController: UINavigationController) -> MainViewController
@@ -30,13 +31,34 @@ extension MainAssembler where Self: DefaultAssembler {
         let vm: MainViewModel = resolve(navController: navController)
         vc.bindViewModel(to: vm)
         
-        // 1: Checkin viewcontroller
-        let checkinVC: CheckinViewController = resolve(navController: navController)
-        
-        // 2: Mycourse
+        // 1: MycourseVC
         let mycourseVC: MyCourseViewController = resolve(navController: navController)
+        mycourseVC.tabBarItem = ESTabBarItem(AnimateBasicContentView(),
+                                             title: "My Courses",
+                                             image: #imageLiteral(resourceName: "homeN"),
+                                             selectedImage: #imageLiteral(resourceName: "homeHL"))
         
-        vc.viewControllers = [checkinVC, mycourseVC]
+        // 3: CheckinVC
+        let checkinVC: CheckinViewController = resolve(navController: navController)
+        checkinVC.tabBarItem = ESTabBarItem(AnimationContentView())
+        
+        vc.shouldHijackHandler = {
+            tabbarController, viewController, index in
+            if index == 1 {
+                return true
+            }
+            return false
+        }
+        
+        // 5: AccountVC
+        let accountVC: AccountViewController = resolve(navController: navController)
+        accountVC.tabBarItem = ESTabBarItem(AnimateBasicContentView(),
+                                            title: "Account",
+                                            image: #imageLiteral(resourceName: "accountN"),
+                                            selectedImage: #imageLiteral(resourceName: "accountHL"))
+        
+        vc.viewControllers = [mycourseVC, checkinVC, accountVC]
+        
         return vc
     }
     

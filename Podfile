@@ -6,6 +6,8 @@ def pods
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
+  pod "RxAppState"
+  pod "RxGesture"
   
   # Clean Architecture
   pod 'MGArchitecture'
@@ -34,6 +36,11 @@ def pods
   pod 'OrderedSet'
   pod 'MBProgressHUD'
   pod 'SDWebImage'
+  
+  #support UI
+  pod "ESTabBarController-swift"
+  pod 'lottie-ios'
+  
 end
 
 def test_pods

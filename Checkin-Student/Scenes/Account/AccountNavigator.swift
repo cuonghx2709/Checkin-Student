@@ -11,5 +11,6 @@ protocol AccountNavigatorType {
 }
 
 struct AccountNavigator: AccountNavigatorType {
-    
+    let assembler: Assembler
+    let navigation: UINavigationController
 }

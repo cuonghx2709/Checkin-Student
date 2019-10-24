@@ -1,20 +1,22 @@
 //
 //  UIImage+.swift
-//  MovieDB
+//  fGoal
 //
-//  Created by cuonghx on 6/18/19.
+//  Created by Phạm Xuân Tiến on 5/24/19.
 //  Copyright © 2019 Sun*. All rights reserved.
-
-import Foundation
+//
 
 extension UIImage {
-    func resizeImage(_ size: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContext(size)
-        self.draw(in: CGRect(origin: CGPoint(x: 0,
-                                             y: 0),
-                             size: size))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    func maskWith(color: UIColor) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        let context = UIGraphicsGetCurrentContext()
+        let rect = CGRect(origin: CGPoint.zero, size: size)
+        color.setFill()
+        draw(in: rect)
+        context?.setBlendMode(.sourceIn)
+        context?.fill(rect)
+        let resultImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return newImage
+        return resultImage ?? UIImage()
     }
 }
