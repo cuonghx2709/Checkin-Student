@@ -49,6 +49,11 @@
 		9554E48F2361F985001EF0A2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9554E48B2361F985001EF0A2 /* Login.storyboard */; };
 		9554E4902361F986001EF0A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9554E48C2361F985001EF0A2 /* Main.storyboard */; };
 		9554E4912361F986001EF0A2 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E48D2361F985001EF0A2 /* Storyboards.swift */; };
+		9554E49F2361FE58001EF0A2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E4992361FE58001EF0A2 /* APIError.swift */; };
+		9554E4A02361FE58001EF0A2 /* APIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E49A2361FE58001EF0A2 /* APIInput.swift */; };
+		9554E4A12361FE58001EF0A2 /* APIOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E49B2361FE58001EF0A2 /* APIOutput.swift */; };
+		9554E4A22361FE58001EF0A2 /* APISevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E49C2361FE58001EF0A2 /* APISevice.swift */; };
+		9554E4A32361FE58001EF0A2 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E49D2361FE58001EF0A2 /* APIUrls.swift */; };
 		95AB68E92360ADB1003C1137 /* AnimateBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68E82360ADB1003C1137 /* AnimateBasicContentView.swift */; };
 		95AB68EB2360AE25003C1137 /* AnimationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68EA2360AE25003C1137 /* AnimationContentView.swift */; };
 		95AB68ED2360B217003C1137 /* face-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AB68EC2360B216003C1137 /* face-scanning.json */; };
@@ -56,11 +61,6 @@
 		95EED1AA23536C2E003F6E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED1A923536C2E003F6E7A /* AppDelegate.swift */; };
 		95EED1B123536C32003F6E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EED1B023536C32003F6E7A /* Assets.xcassets */; };
 		95EED1BF23536C32003F6E7A /* Checkin_StudentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED1BE23536C32003F6E7A /* Checkin_StudentTests.swift */; };
-		95EED35E23538B4C003F6E7A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED2EC23538B4A003F6E7A /* APIError.swift */; };
-		95EED35F23538B4C003F6E7A /* APIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED2ED23538B4A003F6E7A /* APIInput.swift */; };
-		95EED36023538B4C003F6E7A /* APIOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED2EE23538B4A003F6E7A /* APIOutput.swift */; };
-		95EED36123538B4C003F6E7A /* APISevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED2EF23538B4A003F6E7A /* APISevice.swift */; };
-		95EED36223538B4C003F6E7A /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED2F023538B4A003F6E7A /* APIUrls.swift */; };
 		95EED36323538B4C003F6E7A /* UnitTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED2F223538B4A003F6E7A /* UnitTestViewController.swift */; };
 		95EED36423538B4C003F6E7A /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED2F423538B4B003F6E7A /* Assembler.swift */; };
 		95EED37423538B4C003F6E7A /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED30923538B4B003F6E7A /* AppAssembler.swift */; };
@@ -137,6 +137,11 @@
 		9554E48B2361F985001EF0A2 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		9554E48C2361F985001EF0A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9554E48D2361F985001EF0A2 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		9554E4992361FE58001EF0A2 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		9554E49A2361FE58001EF0A2 /* APIInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIInput.swift; sourceTree = "<group>"; };
+		9554E49B2361FE58001EF0A2 /* APIOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOutput.swift; sourceTree = "<group>"; };
+		9554E49C2361FE58001EF0A2 /* APISevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISevice.swift; sourceTree = "<group>"; };
+		9554E49D2361FE58001EF0A2 /* APIUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
 		95AB68E82360ADB1003C1137 /* AnimateBasicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateBasicContentView.swift; sourceTree = "<group>"; };
 		95AB68EA2360AE25003C1137 /* AnimationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationContentView.swift; sourceTree = "<group>"; };
 		95AB68EC2360B216003C1137 /* face-scanning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "face-scanning.json"; sourceTree = "<group>"; };
@@ -149,11 +154,6 @@
 		95EED1BE23536C32003F6E7A /* Checkin_StudentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin_StudentTests.swift; sourceTree = "<group>"; };
 		95EED1C023536C33003F6E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95EED2D423537EEA003F6E7A /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		95EED2EC23538B4A003F6E7A /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		95EED2ED23538B4A003F6E7A /* APIInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIInput.swift; sourceTree = "<group>"; };
-		95EED2EE23538B4A003F6E7A /* APIOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIOutput.swift; sourceTree = "<group>"; };
-		95EED2EF23538B4A003F6E7A /* APISevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISevice.swift; sourceTree = "<group>"; };
-		95EED2F023538B4A003F6E7A /* APIUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
 		95EED2F223538B4A003F6E7A /* UnitTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestViewController.swift; sourceTree = "<group>"; };
 		95EED2F423538B4B003F6E7A /* Assembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		95EED30923538B4B003F6E7A /* AppAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
@@ -272,6 +272,58 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		9554E4922361FE58001EF0A2 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				9554E4952361FE58001EF0A2 /* Repositories */,
+				9554E4972361FE58001EF0A2 /* Services */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		9554E4952361FE58001EF0A2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9554E4962361FE58001EF0A2 /* Error */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9554E4962361FE58001EF0A2 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		9554E4972361FE58001EF0A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9554E4982361FE58001EF0A2 /* API */,
+				9554E49E2361FE58001EF0A2 /* Validation */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9554E4982361FE58001EF0A2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9554E4992361FE58001EF0A2 /* APIError.swift */,
+				9554E49A2361FE58001EF0A2 /* APIInput.swift */,
+				9554E49B2361FE58001EF0A2 /* APIOutput.swift */,
+				9554E49C2361FE58001EF0A2 /* APISevice.swift */,
+				9554E49D2361FE58001EF0A2 /* APIUrls.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9554E49E2361FE58001EF0A2 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
 		95AB68E72360AD92003C1137 /* ESTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,9 +358,9 @@
 			isa = PBXGroup;
 			children = (
 				95EED2F323538B4B003F6E7A /* Assembler */,
+				9554E4922361FE58001EF0A2 /* Platform */,
 				95EED2FF23538B4B003F6E7A /* Domain */,
 				95EED2F523538B4B003F6E7A /* Extensions */,
-				95EED2D823538B4A003F6E7A /* Platform */,
 				95EED30723538B4B003F6E7A /* Scenes */,
 				95EED34E23538B4C003F6E7A /* Support */,
 				95EED2F223538B4A003F6E7A /* UnitTestViewController.swift */,
@@ -327,51 +379,6 @@
 				95EED1C023536C33003F6E7A /* Info.plist */,
 			);
 			path = "Checkin-StudentTests";
-			sourceTree = "<group>";
-		};
-		95EED2D823538B4A003F6E7A /* Platform */ = {
-			isa = PBXGroup;
-			children = (
-				95EED2DC23538B4A003F6E7A /* Repositories */,
-				95EED2E523538B4A003F6E7A /* Services */,
-			);
-			name = Platform;
-			path = "../../Training ios /ios-moviedb-02/MovieDB/Platform";
-			sourceTree = "<group>";
-		};
-		95EED2DC23538B4A003F6E7A /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		95EED2E523538B4A003F6E7A /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				95EED2E623538B4A003F6E7A /* API */,
-				95EED2F123538B4A003F6E7A /* Validation */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		95EED2E623538B4A003F6E7A /* API */ = {
-			isa = PBXGroup;
-			children = (
-				95EED2EC23538B4A003F6E7A /* APIError.swift */,
-				95EED2ED23538B4A003F6E7A /* APIInput.swift */,
-				95EED2EE23538B4A003F6E7A /* APIOutput.swift */,
-				95EED2EF23538B4A003F6E7A /* APISevice.swift */,
-				95EED2F023538B4A003F6E7A /* APIUrls.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		95EED2F123538B4A003F6E7A /* Validation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Validation;
 			sourceTree = "<group>";
 		};
 		95EED2F323538B4B003F6E7A /* Assembler */ = {
@@ -681,9 +688,10 @@
 				952D28D023561F9000D7C3DE /* MyCourseUseCase.swift in Sources */,
 				95EED36323538B4C003F6E7A /* UnitTestViewController.swift in Sources */,
 				95AB68E92360ADB1003C1137 /* AnimateBasicContentView.swift in Sources */,
+				9554E4A02361FE58001EF0A2 /* APIInput.swift in Sources */,
 				95EED38E23538B4C003F6E7A /* MainViewController.swift in Sources */,
+				9554E4A22361FE58001EF0A2 /* APISevice.swift in Sources */,
 				952D28C72356194700D7C3DE /* CheckinViewModel.swift in Sources */,
-				95EED36023538B4C003F6E7A /* APIOutput.swift in Sources */,
 				9554E4912361F986001EF0A2 /* Storyboards.swift in Sources */,
 				95EED37423538B4C003F6E7A /* AppAssembler.swift in Sources */,
 				952D28DA23562AB400D7C3DE /* AccountNavigator.swift in Sources */,
@@ -692,10 +700,10 @@
 				952D28B72356175600D7C3DE /* LoginNavigator.swift in Sources */,
 				95EED38D23538B4C003F6E7A /* MainUseCase.swift in Sources */,
 				952D28D423561FB500D7C3DE /* MyCourseViewController.swift in Sources */,
-				95EED35F23538B4C003F6E7A /* APIInput.swift in Sources */,
 				952D28C92356195C00D7C3DE /* CheckinViewController.swift in Sources */,
 				9554E4712361F45E001EF0A2 /* UIViewController+.swift in Sources */,
 				95EED3AC23538B4C003F6E7A /* Constants.swift in Sources */,
+				9554E4A12361FE58001EF0A2 /* APIOutput.swift in Sources */,
 				9554E4772361F45E001EF0A2 /* Observable+.swift in Sources */,
 				9554E4762361F45E001EF0A2 /* UIProgressView+.swift in Sources */,
 				952D28BD2356178300D7C3DE /* LoginViewController.swift in Sources */,
@@ -705,6 +713,8 @@
 				9554E4832361F45E001EF0A2 /* UIAlertController+.swift in Sources */,
 				9554E47A2361F45E001EF0A2 /* Date+.swift in Sources */,
 				9554E47B2361F45E001EF0A2 /* UITextField+.swift in Sources */,
+				9554E4A32361FE58001EF0A2 /* APIUrls.swift in Sources */,
+				9554E49F2361FE58001EF0A2 /* APIError.swift in Sources */,
 				95EED1AA23536C2E003F6E7A /* AppDelegate.swift in Sources */,
 				9554E46F2361F45E001EF0A2 /* String+.swift in Sources */,
 				952D28D223561F9E00D7C3DE /* MyCourseViewModel.swift in Sources */,
@@ -719,12 +729,9 @@
 				95EED37723538B4C003F6E7A /* AppViewModel.swift in Sources */,
 				95AB68EF2360B4AA003C1137 /* AccountViewController.swift in Sources */,
 				95EED36423538B4C003F6E7A /* Assembler.swift in Sources */,
-				95EED36123538B4C003F6E7A /* APISevice.swift in Sources */,
 				9554E47C2361F45E001EF0A2 /* UIFont+.swift in Sources */,
-				95EED36223538B4C003F6E7A /* APIUrls.swift in Sources */,
 				952D28B52356174A00D7C3DE /* LoginAssembler.swift in Sources */,
 				952D28DE23562B0400D7C3DE /* AccountViewModel.swift in Sources */,
-				95EED35E23538B4C003F6E7A /* APIError.swift in Sources */,
 				95EED37523538B4C003F6E7A /* AppNavigator.swift in Sources */,
 				9554E4792361F45E001EF0A2 /* UISearchBar+.swift in Sources */,
 				952D28C32356192200D7C3DE /* CheckinNavigator.swift in Sources */,
