@@ -11,8 +11,10 @@ import ObjectMapper
 // swiftlint:disable final_class
 class APIOutput: APIOutputBase {
     var message: String?
+    var statusCode = -1
     
     override func mapping(map: Map) {
-        message <- map["status_message"]
+        message <- map["message"]
+        statusCode <- map["status"]
     }
 }

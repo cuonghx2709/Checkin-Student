@@ -40,6 +40,10 @@ def pods
   #support UI
   pod "ESTabBarController-swift"
   pod 'lottie-ios'
+  pod 'Toaster'
+  
+  # Keychain
+  pod 'SwiftKeychainWrapper', '3.2'
   
 end
 

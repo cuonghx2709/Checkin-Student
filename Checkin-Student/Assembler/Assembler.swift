@@ -11,6 +11,8 @@ protocol Assembler: class,
     CheckinAssembler,
     MyCourseAssembler,
     AccountAssembler,
+    LoginAssembler,
+    RepositoriesAssembler,
     AppAssembler {
     
 }

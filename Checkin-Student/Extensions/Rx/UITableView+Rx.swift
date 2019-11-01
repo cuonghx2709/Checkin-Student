@@ -9,7 +9,7 @@ extension Reactive where Base: UITableView {
     func emptyData() -> Binder<Bool> {
         return Binder(base) { tableView, isEmptyData in
             if isEmptyData {
-                let frame = CGRect(x: 0,
+                let _ = CGRect(x: 0,
                                    y: 0,
                                    width: tableView.width,
                                    height: tableView.height)

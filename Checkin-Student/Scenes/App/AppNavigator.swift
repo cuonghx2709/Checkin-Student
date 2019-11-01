@@ -18,8 +18,9 @@ struct AppNavigator: AppNavigatorType {
     
     func toMain() {
         let nav = UINavigationController()
-        let mainVC: MainViewController = assembler.resolve(navController: nav)
-        nav.viewControllers = [mainVC]
+//        let mainVC: MainViewController = assembler.resolve(navController: nav)
+        let loginVC: LoginViewController = assembler.resolve(navController: nav)
+        nav.viewControllers = [loginVC]
         window.rootViewController = nav
     }
 }
