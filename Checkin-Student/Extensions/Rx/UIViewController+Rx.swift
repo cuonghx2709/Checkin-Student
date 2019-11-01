@@ -29,23 +29,24 @@ extension Reactive where Base: UIViewController {
     var isLoading: Binder<Bool> {
         return Binder(base) { vc, isLoading in
             if isLoading {
-                let hud = MBProgressHUD.showAdded(to: vc.view, animated: true).then {
-                    $0.customView = UIImageView(image: #imageLiteral(resourceName: "f-loading"))
-                    $0.mode = .customView
-                    $0.removeFromSuperViewOnHide = false
-                    $0.isSquare = true
-                    $0.label.text = ""
-                    $0.bezelView.backgroundColor = .clear
-                    $0.contentColor = .clear
-                }
-                let animation = CABasicAnimation(keyPath: "transform.rotation").then {
-                    $0.fromValue = 0.0
-                    $0.toValue = 2.0 * Double.pi
-                    $0.duration = 1
-                    $0.repeatCount = HUGE
-                    $0.isRemovedOnCompletion = false
-                }
-                hud.customView?.layer.add(animation, forKey: "rotationAnimation")
+                MBProgressHUD.showAdded(to: vc.view, animated: true)
+//                let hud = MBProgressHUD.showAdded(to: vc.view, animated: true).then {
+//                    $0.customView = UIImageView(image: #imageLiteral(resourceName: "f-loading"))
+//                    $0.mode = .customView
+//                    $0.removeFromSuperViewOnHide = false
+//                    $0.isSquare = true
+//                    $0.label.text = ""
+//                    $0.bezelView.backgroundColor = .clear
+//                    $0.contentColor = .clear
+//                }
+//                let animation = CABasicAnimation(keyPath: "transform.rotation").then {
+//                    $0.fromValue = 0.0
+//                    $0.toValue = 2.0 * Double.pi
+//                    $0.duration = 1
+//                    $0.repeatCount = HUGE
+//                    $0.isRemovedOnCompletion = false
+//                }
+//                hud.customView?.layer.add(animation, forKey: "rotationAnimation")
             } else {
                 MBProgressHUD.hide(for: vc.view, animated: true)
             }

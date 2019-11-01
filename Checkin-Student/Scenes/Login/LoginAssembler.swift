@@ -33,6 +33,6 @@ extension LoginAssembler where Self: DefaultAssembler {
     }
     
     func resolve() -> LoginUseCaseType {
-        return LoginUseCase()
+        return LoginUseCase(userRepo: resolve())
     }
 }

@@ -23,3 +23,9 @@ struct APIResponseError: APIError {
     }
 }
 
+struct WrongEmailOrPasswordError: APIError {
+    var errorDescription: String? {
+        return "Sai tài khoản hoặc mật khẩu"
+    }
+}
+

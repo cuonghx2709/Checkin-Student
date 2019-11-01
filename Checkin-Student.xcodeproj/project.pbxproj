@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950F48FF2369E53D00FA6C53 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F48FE2369E53C00FA6C53 /* ValidationError.swift */; };
+		950F49012369F18200FA6C53 /* API+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F49002369F18200FA6C53 /* API+Login.swift */; };
+		950F49042369F38300FA6C53 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F49032369F38300FA6C53 /* Student.swift */; };
+		950F49082369F58E00FA6C53 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F49072369F58E00FA6C53 /* UserRepository.swift */; };
+		950F490A2369F9D300FA6C53 /* RepositoriesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F49092369F9D300FA6C53 /* RepositoriesAssembler.swift */; };
+		95192E562367410C00429B7C /* MyCourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95192E542367410C00429B7C /* MyCourseCollectionViewCell.swift */; };
+		95192E572367410C00429B7C /* MyCourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95192E552367410C00429B7C /* MyCourseCollectionViewCell.xib */; };
 		952D28B52356174A00D7C3DE /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28B42356174A00D7C3DE /* LoginAssembler.swift */; };
 		952D28B72356175600D7C3DE /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28B62356175600D7C3DE /* LoginNavigator.swift */; };
 		952D28B92356176200D7C3DE /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28B82356176200D7C3DE /* LoginUseCase.swift */; };
@@ -58,6 +65,9 @@
 		95AB68EB2360AE25003C1137 /* AnimationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68EA2360AE25003C1137 /* AnimationContentView.swift */; };
 		95AB68ED2360B217003C1137 /* face-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AB68EC2360B216003C1137 /* face-scanning.json */; };
 		95AB68EF2360B4AA003C1137 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68EE2360B4AA003C1137 /* AccountViewController.swift */; };
+		95CF9152236C8716009DF7E5 /* ValidatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF9151236C8716009DF7E5 /* ValidatePassword.swift */; };
+		95CF9155236C8A24009DF7E5 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF9154236C8A24009DF7E5 /* AuthManager.swift */; };
+		95CF9157236C9653009DF7E5 /* API+ForgotPW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF9156236C9653009DF7E5 /* API+ForgotPW.swift */; };
 		95EED1AA23536C2E003F6E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED1A923536C2E003F6E7A /* AppDelegate.swift */; };
 		95EED1B123536C32003F6E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EED1B023536C32003F6E7A /* Assets.xcassets */; };
 		95EED1BF23536C32003F6E7A /* Checkin_StudentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EED1BE23536C32003F6E7A /* Checkin_StudentTests.swift */; };
@@ -95,6 +105,13 @@
 		35EE3FBE6F5645B51108B238 /* Pods-Checkin-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkin-Student.release.xcconfig"; path = "Target Support Files/Pods-Checkin-Student/Pods-Checkin-Student.release.xcconfig"; sourceTree = "<group>"; };
 		43A0381759E0A77F6EE2671E /* Pods_Checkin_Student.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checkin_Student.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2631CC42B6B6728185AFF7 /* Pods-Checkin-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkin-Student.debug.xcconfig"; path = "Target Support Files/Pods-Checkin-Student/Pods-Checkin-Student.debug.xcconfig"; sourceTree = "<group>"; };
+		950F48FE2369E53C00FA6C53 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		950F49002369F18200FA6C53 /* API+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Login.swift"; sourceTree = "<group>"; };
+		950F49032369F38300FA6C53 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		950F49072369F58E00FA6C53 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		950F49092369F9D300FA6C53 /* RepositoriesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembler.swift; sourceTree = "<group>"; };
+		95192E542367410C00429B7C /* MyCourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		95192E552367410C00429B7C /* MyCourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		952D28B42356174A00D7C3DE /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		952D28B62356175600D7C3DE /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		952D28B82356176200D7C3DE /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
@@ -146,6 +163,9 @@
 		95AB68EA2360AE25003C1137 /* AnimationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationContentView.swift; sourceTree = "<group>"; };
 		95AB68EC2360B216003C1137 /* face-scanning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "face-scanning.json"; sourceTree = "<group>"; };
 		95AB68EE2360B4AA003C1137 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		95CF9151236C8716009DF7E5 /* ValidatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePassword.swift; sourceTree = "<group>"; };
+		95CF9154236C8A24009DF7E5 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		95CF9156236C9653009DF7E5 /* API+ForgotPW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+ForgotPW.swift"; sourceTree = "<group>"; };
 		95EED1A623536C2E003F6E7A /* Checkin-Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Checkin-Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EED1A923536C2E003F6E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EED1B023536C32003F6E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +222,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		950F49022369F1CE00FA6C53 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				950F49002369F18200FA6C53 /* API+Login.swift */,
+				95CF9156236C9653009DF7E5 /* API+ForgotPW.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		95192E532367406400429B7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95192E542367410C00429B7C /* MyCourseCollectionViewCell.swift */,
+				95192E552367410C00429B7C /* MyCourseCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		952D28B32356171200D7C3DE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +267,7 @@
 		952D28CA23561F3900D7C3DE /* MyCourse */ = {
 			isa = PBXGroup;
 			children = (
+				95192E532367406400429B7C /* View */,
 				952D28CB23561F5C00D7C3DE /* MyCourseAssembler.swift */,
 				952D28CD23561F7D00D7C3DE /* MyCourseNavigator.swift */,
 				952D28CF23561F9000D7C3DE /* MyCourseUseCase.swift */,
@@ -275,6 +314,7 @@
 		9554E4922361FE58001EF0A2 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				95CF9153236C8A0B009DF7E5 /* Auth */,
 				9554E4952361FE58001EF0A2 /* Repositories */,
 				9554E4972361FE58001EF0A2 /* Services */,
 			);
@@ -285,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				9554E4962361FE58001EF0A2 /* Error */,
+				950F49072369F58E00FA6C53 /* UserRepository.swift */,
+				950F49092369F9D300FA6C53 /* RepositoriesAssembler.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -308,6 +350,7 @@
 		9554E4982361FE58001EF0A2 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				950F49022369F1CE00FA6C53 /* Extension */,
 				9554E4992361FE58001EF0A2 /* APIError.swift */,
 				9554E49A2361FE58001EF0A2 /* APIInput.swift */,
 				9554E49B2361FE58001EF0A2 /* APIOutput.swift */,
@@ -320,6 +363,8 @@
 		9554E49E2361FE58001EF0A2 /* Validation */ = {
 			isa = PBXGroup;
 			children = (
+				950F48FE2369E53C00FA6C53 /* ValidationError.swift */,
+				95CF9151236C8716009DF7E5 /* ValidatePassword.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -332,6 +377,14 @@
 				95AB68EA2360AE25003C1137 /* AnimationContentView.swift */,
 			);
 			path = ESTabBar;
+			sourceTree = "<group>";
+		};
+		95CF9153236C8A0B009DF7E5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				95CF9154236C8A24009DF7E5 /* AuthManager.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		95EED19D23536C2E003F6E7A = {
@@ -423,6 +476,7 @@
 		95EED30023538B4B003F6E7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				950F49032369F38300FA6C53 /* Student.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -583,6 +637,7 @@
 			files = (
 				95EED1B123536C32003F6E7A /* Assets.xcassets in Resources */,
 				95EED37923538B4C003F6E7A /* EmptyDataView.xib in Resources */,
+				95192E572367410C00429B7C /* MyCourseCollectionViewCell.xib in Resources */,
 				9554E48F2361F985001EF0A2 /* Login.storyboard in Resources */,
 				9554E4902361F986001EF0A2 /* Main.storyboard in Resources */,
 				95AB68ED2360B217003C1137 /* face-scanning.json in Resources */,
@@ -690,10 +745,13 @@
 				95AB68E92360ADB1003C1137 /* AnimateBasicContentView.swift in Sources */,
 				9554E4A02361FE58001EF0A2 /* APIInput.swift in Sources */,
 				95EED38E23538B4C003F6E7A /* MainViewController.swift in Sources */,
+				950F48FF2369E53D00FA6C53 /* ValidationError.swift in Sources */,
 				9554E4A22361FE58001EF0A2 /* APISevice.swift in Sources */,
 				952D28C72356194700D7C3DE /* CheckinViewModel.swift in Sources */,
 				9554E4912361F986001EF0A2 /* Storyboards.swift in Sources */,
+				95CF9157236C9653009DF7E5 /* API+ForgotPW.swift in Sources */,
 				95EED37423538B4C003F6E7A /* AppAssembler.swift in Sources */,
+				950F49012369F18200FA6C53 /* API+Login.swift in Sources */,
 				952D28DA23562AB400D7C3DE /* AccountNavigator.swift in Sources */,
 				952D28C12356191800D7C3DE /* CheckinAssembler.swift in Sources */,
 				9554E4782361F45E001EF0A2 /* UIApplication+.swift in Sources */,
@@ -708,16 +766,20 @@
 				9554E4762361F45E001EF0A2 /* UIProgressView+.swift in Sources */,
 				952D28BD2356178300D7C3DE /* LoginViewController.swift in Sources */,
 				9554E47F2361F45E001EF0A2 /* UITableView+Rx.swift in Sources */,
+				950F49042369F38300FA6C53 /* Student.swift in Sources */,
 				95EED38B23538B4C003F6E7A /* MainAssembler.swift in Sources */,
 				9554E4732361F45E001EF0A2 /* UILabel+.swift in Sources */,
 				9554E4832361F45E001EF0A2 /* UIAlertController+.swift in Sources */,
+				95CF9155236C8A24009DF7E5 /* AuthManager.swift in Sources */,
 				9554E47A2361F45E001EF0A2 /* Date+.swift in Sources */,
 				9554E47B2361F45E001EF0A2 /* UITextField+.swift in Sources */,
 				9554E4A32361FE58001EF0A2 /* APIUrls.swift in Sources */,
 				9554E49F2361FE58001EF0A2 /* APIError.swift in Sources */,
 				95EED1AA23536C2E003F6E7A /* AppDelegate.swift in Sources */,
 				9554E46F2361F45E001EF0A2 /* String+.swift in Sources */,
+				95CF9152236C8716009DF7E5 /* ValidatePassword.swift in Sources */,
 				952D28D223561F9E00D7C3DE /* MyCourseViewModel.swift in Sources */,
+				950F490A2369F9D300FA6C53 /* RepositoriesAssembler.swift in Sources */,
 				95EED38C23538B4C003F6E7A /* MainNavigator.swift in Sources */,
 				952D28DC23562AF200D7C3DE /* AccountUseCase.swift in Sources */,
 				9554E4752361F45E001EF0A2 /* UIView+.swift in Sources */,
@@ -731,9 +793,11 @@
 				95EED36423538B4C003F6E7A /* Assembler.swift in Sources */,
 				9554E47C2361F45E001EF0A2 /* UIFont+.swift in Sources */,
 				952D28B52356174A00D7C3DE /* LoginAssembler.swift in Sources */,
+				950F49082369F58E00FA6C53 /* UserRepository.swift in Sources */,
 				952D28DE23562B0400D7C3DE /* AccountViewModel.swift in Sources */,
 				95EED37523538B4C003F6E7A /* AppNavigator.swift in Sources */,
 				9554E4792361F45E001EF0A2 /* UISearchBar+.swift in Sources */,
+				95192E562367410C00429B7C /* MyCourseCollectionViewCell.swift in Sources */,
 				952D28C32356192200D7C3DE /* CheckinNavigator.swift in Sources */,
 				9554E4812361F45E001EF0A2 /* UIViewController+Rx.swift in Sources */,
 				9554E4822361F45E001EF0A2 /* ViewModelType+.swift in Sources */,
