@@ -9,6 +9,7 @@
 protocol UserRepositoryType {
     func login(email: String, password: String) -> Observable<Student>
     func forgotPW(email: String) -> Observable<Bool>
+    func getUser() -> Observable<Student>
 }
 
 struct UserRepository: UserRepositoryType {
@@ -28,5 +29,12 @@ struct UserRepository: UserRepositoryType {
         let input = API.ForgotPWInput(email: email)
         return API.shared.forgotPW(input)
             .map { $0.statusCode == Constants.StatusCode.successCode }
+    }
+    
+    func getUser() -> Observable<Student> {
+        guard let student = AuthManager.authStudent else {
+            return .error(APIExpiredTokenError())
+        }
+        return Observable.just(student)
     }
 }

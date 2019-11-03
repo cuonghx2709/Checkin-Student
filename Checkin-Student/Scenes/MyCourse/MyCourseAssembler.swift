@@ -33,6 +33,7 @@ extension MyCourseAssembler where Self: DefaultAssembler {
     }
     
     func resolve() -> MyCourseUseCaseType {
-        return MyCourseUseCase()
+        return MyCourseUseCase(courseRepo: resolve(),
+                               userRepo: resolve())
     }
 }

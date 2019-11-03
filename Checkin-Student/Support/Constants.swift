@@ -28,5 +28,10 @@ enum Constants {
         static let plzCheckEmail = "Hãy kiểm tra email của bạn"
         static let tryLater = "Đã có một số lỗi sảy ra! Hãy thử lại."
         static let notFoundEmail = "Không thể tìm thấy email của bạn! Vui lòng nhập đúng email."
+        static let loading = "Loading..."
+    }
+    
+    enum Title {
+        static let defaulYourName = "Bạn, hãy cập nhật thông tin!"
     }
 }

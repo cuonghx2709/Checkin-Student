@@ -30,6 +30,8 @@ struct LoginNavigator: LoginNavigatorType {
     
     func toMain() {
         // Code somthing to go to Main Screen
+        let mainVC: MainViewController = assembler.resolve(navController: navigation)
+        navigation.pushViewController(mainVC, animated: true)
     }
     
     func toSignUpScreen() {

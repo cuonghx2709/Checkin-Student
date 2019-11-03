@@ -10,8 +10,16 @@ import UIKit
 
 final class MyCourseCollectionViewCell: UICollectionViewCell, NibReusable {
 
+    @IBOutlet private weak var bgimageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
+    func bindViewModel(_ viewModel: Course) {
+        titleLabel.text = viewModel.name
+        descriptionLabel.text = viewModel.place
+    }
 }

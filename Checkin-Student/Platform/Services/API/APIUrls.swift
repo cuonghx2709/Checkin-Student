@@ -11,5 +11,7 @@ extension API {
         private static var apiBaseURL = "http://128.199.145.205:5050"
         static let loginAPI = apiBaseURL + "/login"
         static let forgotPwAPI = apiBaseURL + "/student/forgotpassword"
+        static let student = apiBaseURL + "/student"
+        static let enroll = apiBaseURL + "/enroll"
     }
 }
