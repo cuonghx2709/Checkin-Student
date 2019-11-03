@@ -33,6 +33,11 @@
 		952D28DA23562AB400D7C3DE /* AccountNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28D923562AB400D7C3DE /* AccountNavigator.swift */; };
 		952D28DC23562AF200D7C3DE /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28DB23562AF200D7C3DE /* AccountUseCase.swift */; };
 		952D28DE23562B0400D7C3DE /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28DD23562B0400D7C3DE /* AccountViewModel.swift */; };
+		954BCB75236ECB9D00855560 /* API+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB74236ECB9D00855560 /* API+Register.swift */; };
+		954BCB77236ECDAF00855560 /* API+UpdateUserInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB76236ECDAF00855560 /* API+UpdateUserInfor.swift */; };
+		954BCB79236ECF3C00855560 /* API+Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB78236ECF3C00855560 /* API+Courses.swift */; };
+		954BCB7B236ED48E00855560 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB7A236ED48E00855560 /* Course.swift */; };
+		954BCB7D236ED82400855560 /* CourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB7C236ED82400855560 /* CourseRepository.swift */; };
 		9554E46F2361F45E001EF0A2 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E4592361F455001EF0A2 /* String+.swift */; };
 		9554E4702361F45E001EF0A2 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E45A2361F456001EF0A2 /* UIImage+.swift */; };
 		9554E4712361F45E001EF0A2 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E45B2361F456001EF0A2 /* UIViewController+.swift */; };
@@ -131,6 +136,11 @@
 		952D28D923562AB400D7C3DE /* AccountNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigator.swift; sourceTree = "<group>"; };
 		952D28DB23562AF200D7C3DE /* AccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUseCase.swift; sourceTree = "<group>"; };
 		952D28DD23562B0400D7C3DE /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		954BCB74236ECB9D00855560 /* API+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Register.swift"; sourceTree = "<group>"; };
+		954BCB76236ECDAF00855560 /* API+UpdateUserInfor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+UpdateUserInfor.swift"; sourceTree = "<group>"; };
+		954BCB78236ECF3C00855560 /* API+Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Courses.swift"; sourceTree = "<group>"; };
+		954BCB7A236ED48E00855560 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		954BCB7C236ED82400855560 /* CourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRepository.swift; sourceTree = "<group>"; };
 		9554E4592361F455001EF0A2 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		9554E45A2361F456001EF0A2 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		9554E45B2361F456001EF0A2 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -227,6 +237,9 @@
 			children = (
 				950F49002369F18200FA6C53 /* API+Login.swift */,
 				95CF9156236C9653009DF7E5 /* API+ForgotPW.swift */,
+				954BCB74236ECB9D00855560 /* API+Register.swift */,
+				954BCB76236ECDAF00855560 /* API+UpdateUserInfor.swift */,
+				954BCB78236ECF3C00855560 /* API+Courses.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -327,6 +340,7 @@
 				9554E4962361FE58001EF0A2 /* Error */,
 				950F49072369F58E00FA6C53 /* UserRepository.swift */,
 				950F49092369F9D300FA6C53 /* RepositoriesAssembler.swift */,
+				954BCB7C236ED82400855560 /* CourseRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -477,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				950F49032369F38300FA6C53 /* Student.swift */,
+				954BCB7A236ED48E00855560 /* Course.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -775,10 +790,12 @@
 				9554E47B2361F45E001EF0A2 /* UITextField+.swift in Sources */,
 				9554E4A32361FE58001EF0A2 /* APIUrls.swift in Sources */,
 				9554E49F2361FE58001EF0A2 /* APIError.swift in Sources */,
+				954BCB77236ECDAF00855560 /* API+UpdateUserInfor.swift in Sources */,
 				95EED1AA23536C2E003F6E7A /* AppDelegate.swift in Sources */,
 				9554E46F2361F45E001EF0A2 /* String+.swift in Sources */,
 				95CF9152236C8716009DF7E5 /* ValidatePassword.swift in Sources */,
 				952D28D223561F9E00D7C3DE /* MyCourseViewModel.swift in Sources */,
+				954BCB75236ECB9D00855560 /* API+Register.swift in Sources */,
 				950F490A2369F9D300FA6C53 /* RepositoriesAssembler.swift in Sources */,
 				95EED38C23538B4C003F6E7A /* MainNavigator.swift in Sources */,
 				952D28DC23562AF200D7C3DE /* AccountUseCase.swift in Sources */,
@@ -788,6 +805,7 @@
 				9554E4722361F45E001EF0A2 /* UIButton+.swift in Sources */,
 				9554E4742361F45E001EF0A2 /* UIColor+.swift in Sources */,
 				952D28BB2356176E00D7C3DE /* LoginViewModel.swift in Sources */,
+				954BCB79236ECF3C00855560 /* API+Courses.swift in Sources */,
 				95EED37723538B4C003F6E7A /* AppViewModel.swift in Sources */,
 				95AB68EF2360B4AA003C1137 /* AccountViewController.swift in Sources */,
 				95EED36423538B4C003F6E7A /* Assembler.swift in Sources */,
@@ -807,8 +825,10 @@
 				952D28CC23561F5C00D7C3DE /* MyCourseAssembler.swift in Sources */,
 				95EED38F23538B4C003F6E7A /* MainViewModel.swift in Sources */,
 				952D28B92356176200D7C3DE /* LoginUseCase.swift in Sources */,
+				954BCB7D236ED82400855560 /* CourseRepository.swift in Sources */,
 				9554E4702361F45E001EF0A2 /* UIImage+.swift in Sources */,
 				952D28D823562AAA00D7C3DE /* AccountAssembler.swift in Sources */,
+				954BCB7B236ED48E00855560 /* Course.swift in Sources */,
 				952D28CE23561F7D00D7C3DE /* MyCourseNavigator.swift in Sources */,
 				9554E4802361F45E001EF0A2 /* UIView+Rx.swift in Sources */,
 			);

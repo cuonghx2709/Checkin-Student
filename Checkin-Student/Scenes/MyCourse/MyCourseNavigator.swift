@@ -7,10 +7,17 @@
 //
 
 protocol MyCourseNavigatorType {
-    
+    func toMyAccount()
 }
 
 struct MyCourseNavigator: MyCourseNavigatorType {
     let assembler: Assembler
     let navigation: UINavigationController
+    
+    func toMyAccount() {
+        guard let mainVC = navigation.viewControllers.first as? MainViewController else {
+            return
+        }
+        mainVC.selectedIndex = 2
+    }
 }
