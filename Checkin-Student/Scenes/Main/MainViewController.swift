@@ -12,6 +12,7 @@ final class MainViewController: ESTabBarController, BindableType {
     
     // MARK: - Propeties
     var viewModel: MainViewModel!
+    private let checkinTrigger = PublishSubject<Void>()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -30,11 +31,20 @@ final class MainViewController: ESTabBarController, BindableType {
     
     // MARK: - Methods
     func bindViewModel() {
+        let input = MainViewModel.Input(
+            checkinTrigger: checkinTrigger.asDriverOnErrorJustComplete()
+        )
+        let output = viewModel.transform(input)
         
+        output.redirect
+            .drive()
+            .disposed(by: rx.disposeBag)
     }
     
     private func configView() {
-        
+        didHijackHandler = { [unowned self] tabbarController, viewController, index in
+            self.checkinTrigger.onNext(())
+        }
     }
     
 }

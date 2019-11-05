@@ -13,6 +13,9 @@ final class MyCourseCollectionViewCell: UICollectionViewCell, NibReusable {
     @IBOutlet private weak var bgimageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var menuButton: UIButton!
+    
+    var menuTouchAction: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,5 +24,8 @@ final class MyCourseCollectionViewCell: UICollectionViewCell, NibReusable {
     func bindViewModel(_ viewModel: Course) {
         titleLabel.text = viewModel.name
         descriptionLabel.text = viewModel.place
+    }
+    @IBAction func handlerMenuButton(_ sender: UIButton) {
+        menuTouchAction?()
     }
 }

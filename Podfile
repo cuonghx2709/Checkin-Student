@@ -41,6 +41,8 @@ def pods
   pod "ESTabBarController-swift"
   pod 'lottie-ios'
   pod 'Toaster'
+  pod 'KUIPopOver'
+  pod 'MessengerKit'
   
   # Keychain
   pod 'SwiftKeychainWrapper', '3.2'

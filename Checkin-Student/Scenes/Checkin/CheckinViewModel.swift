@@ -13,14 +13,17 @@ struct CheckinViewModel {
 
 extension CheckinViewModel: ViewModelType {
     struct Input {
-        
+        var imageFrameTrigger: Driver<CIImage>
     }
     
     struct Output {
-        
+        var detectedImage: Driver<Void>
     }
     
     func transform(_ input: Input) -> Output {
-        return Output()
+        
+        let detectedImage = input.imageFrameTrigger
+        
+        return Output(detectedImage: detectedImage.mapToVoid())
     }
 }

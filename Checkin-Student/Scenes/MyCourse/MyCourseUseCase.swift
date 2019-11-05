@@ -11,6 +11,8 @@ protocol MyCourseUseCaseType {
     func getStudent() -> Observable<Student>
     func getTotalCourse(courses: [Course]) -> String
     func getName(student: Student)  -> String
+    func unrollCourse(course: Course) -> Observable<Bool>
+    func unrollCourse(courseUnrolled: Course, courses: [Course]) -> [Course]
 }
 
 struct MyCourseUseCase: MyCourseUseCaseType {
@@ -35,5 +37,13 @@ struct MyCourseUseCase: MyCourseUseCaseType {
             return Constants.Title.defaulYourName
         }
         return student.name
+    }
+    
+    func unrollCourse(course: Course) -> Observable<Bool> {
+        return courseRepo.unrollCourse(courseId: course.id)
+    }
+    
+    func unrollCourse(courseUnrolled: Course, courses: [Course]) -> [Course] {
+        return courses.filter { $0.id != courseUnrolled.id }
     }
 }

@@ -9,9 +9,15 @@
 import Foundation
 
 protocol MainNavigatorType {
+    func toCheckin()
 }
 
 struct MainNavigator: MainNavigatorType {
     var assembler: Assembler
     var navigation: UINavigationController
+    
+    func toCheckin() {
+        let checkinVC: CheckinViewController = assembler.resolve(navController: navigation)
+        navigation.pushViewController(checkinVC, animated: true)
+    }
 }

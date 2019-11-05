@@ -29,9 +29,16 @@ enum Constants {
         static let tryLater = "Đã có một số lỗi sảy ra! Hãy thử lại."
         static let notFoundEmail = "Không thể tìm thấy email của bạn! Vui lòng nhập đúng email."
         static let loading = "Loading..."
+        static let unrollSuccess = "Thoát khỏi khoá học thành công"
+        static let unrollFail = "Thoát khỏi khoá học thất bại"
     }
     
     enum Title {
         static let defaulYourName = "Bạn, hãy cập nhật thông tin!"
+        static let unroll = "Thoát khỏi khoá học"
+        static let chat = "Chat Box"
+        static let cancel = "Cancel"
+        static let yes = "Yes"
+        static let addCourse = "Thêm khoá học mới"
     }
 }

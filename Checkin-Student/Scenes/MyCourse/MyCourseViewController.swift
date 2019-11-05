@@ -25,6 +25,7 @@ final class MyCourseViewController: UIViewController, BindableType {
     // MARK: - Propeties
     
     var viewModel: MyCourseViewModel!
+    private let showMenuTrigger = PublishSubject<IndexPath>()
     
     private lazy var refreshControl: UIRefreshControl = {
         return UIRefreshControl().then {
@@ -60,7 +61,8 @@ final class MyCourseViewController: UIViewController, BindableType {
             refreshTrigger: refreshControl.rx.controlEvent(.valueChanged).asDriver(),
             checkinTrigger: checkinButton.rx.tap.asDriver(),
             myAccountTrigger: myAccountButton.rx.tap.asDriver(),
-            addCourseTrigger: addButton.rx.tap.asDriver()
+            addCourseTrigger: addButton.rx.tap.asDriver(),
+            menuCourse: showMenuTrigger.asDriverOnErrorJustComplete()
         )
         
         let output = viewModel.transform(input)
@@ -68,13 +70,16 @@ final class MyCourseViewController: UIViewController, BindableType {
         output.user.drive().disposed(by: rx.disposeBag)
         
         output.courses
-            .drive(collectionView.rx.items) { collectionView, row, course in
+            .drive(collectionView.rx.items) { [unowned self] collectionView, row, course in
                 let indexPath = IndexPath(row: row, section: 0)
                 return collectionView
                     .dequeueReusableCell(for: indexPath,
                                          cellType: MyCourseCollectionViewCell.self)
                     .then {
                         $0.bindViewModel(course)
+                        $0.menuTouchAction = {
+                            self.showMenuTrigger.onNext(indexPath)
+                        }
                     }
             }
             .disposed(by: rx.disposeBag)
@@ -98,6 +103,10 @@ final class MyCourseViewController: UIViewController, BindableType {
         output.name
             .drive(nameLabel.rx.text)
             .disposed(by: rx.disposeBag)
+        
+        output.redirected
+            .drive()
+            .disposed(by: rx.disposeBag)
     }
     
     private func configView() {
@@ -106,6 +115,13 @@ final class MyCourseViewController: UIViewController, BindableType {
             .setDelegate(self)
             .disposed(by: rx.disposeBag)
         scrollView.addSubview(refreshControl)
+    }
+    @IBAction func handlerAddAction(_ sender: UIButton) {
+        let addCoursePopup = AddCourseViewController.instantiate()
+        addCoursePopup.showPopoverWithNavigationController(
+            sourceView: sender,
+            shouldDismissOnTap: false
+        )
     }
 }
 

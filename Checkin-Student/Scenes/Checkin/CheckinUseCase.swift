@@ -7,9 +7,11 @@
 //
 
 protocol CheckinUseCaseType {
-    
+    func detectImage(image: CIImage)
 }
 
 struct CheckinUseCase: CheckinUseCaseType {
-    
+    func detectImage(image: CIImage) {
+        
+    }
 }

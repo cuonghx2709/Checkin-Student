@@ -67,6 +67,9 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
                                 <state key="normal" image="menu"/>
+                                <connections>
+                                    <action selector="handlerMenuButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="V2t-jx-Aa8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,6 +124,7 @@
             <connections>
                 <outlet property="bgimageView" destination="wPN-yM-U69" id="02g-ox-Ccb"/>
                 <outlet property="descriptionLabel" destination="1eQ-2m-xT1" id="FBu-Bd-FdX"/>
+                <outlet property="menuButton" destination="hhu-Un-hxZ" id="50A-WB-1wU"/>
                 <outlet property="titleLabel" destination="Scn-Eo-PZE" id="mw7-Qm-qKb"/>
             </connections>
             <point key="canvasLocation" x="-390.57971014492756" y="134.26339285714286"/>

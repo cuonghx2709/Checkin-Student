@@ -11,4 +11,5 @@ import Foundation
 enum Storyboards {
     static let main = UIStoryboard(name: "Main", bundle: nil)
     static let login = UIStoryboard(name: "Login", bundle: nil)
+    static let popup = UIStoryboard(name: "Popup", bundle: nil)
 }

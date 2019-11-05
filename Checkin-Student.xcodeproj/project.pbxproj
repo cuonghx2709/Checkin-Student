@@ -70,6 +70,8 @@
 		95AB68EB2360AE25003C1137 /* AnimationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68EA2360AE25003C1137 /* AnimationContentView.swift */; };
 		95AB68ED2360B217003C1137 /* face-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AB68EC2360B216003C1137 /* face-scanning.json */; };
 		95AB68EF2360B4AA003C1137 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68EE2360B4AA003C1137 /* AccountViewController.swift */; };
+		95CDFBB22371CF030063CE62 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CDFBB12371CF030063CE62 /* AddCourseViewController.swift */; };
+		95CDFBB42371D0410063CE62 /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CDFBB32371D0410063CE62 /* Popup.storyboard */; };
 		95CF9152236C8716009DF7E5 /* ValidatePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF9151236C8716009DF7E5 /* ValidatePassword.swift */; };
 		95CF9155236C8A24009DF7E5 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF9154236C8A24009DF7E5 /* AuthManager.swift */; };
 		95CF9157236C9653009DF7E5 /* API+ForgotPW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF9156236C9653009DF7E5 /* API+ForgotPW.swift */; };
@@ -117,6 +119,7 @@
 		950F49092369F9D300FA6C53 /* RepositoriesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembler.swift; sourceTree = "<group>"; };
 		95192E542367410C00429B7C /* MyCourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		95192E552367410C00429B7C /* MyCourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCourseCollectionViewCell.xib; sourceTree = "<group>"; };
+		951B476D236F40F300923F2C /* Checkin-Student.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Checkin-Student.entitlements"; sourceTree = "<group>"; };
 		952D28B42356174A00D7C3DE /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		952D28B62356175600D7C3DE /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		952D28B82356176200D7C3DE /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 		95AB68EA2360AE25003C1137 /* AnimationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationContentView.swift; sourceTree = "<group>"; };
 		95AB68EC2360B216003C1137 /* face-scanning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "face-scanning.json"; sourceTree = "<group>"; };
 		95AB68EE2360B4AA003C1137 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		95CDFBB12371CF030063CE62 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
+		95CDFBB32371D0410063CE62 /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
 		95CF9151236C8716009DF7E5 /* ValidatePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePassword.swift; sourceTree = "<group>"; };
 		95CF9154236C8A24009DF7E5 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		95CF9156236C9653009DF7E5 /* API+ForgotPW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+ForgotPW.swift"; sourceTree = "<group>"; };
@@ -280,6 +285,7 @@
 		952D28CA23561F3900D7C3DE /* MyCourse */ = {
 			isa = PBXGroup;
 			children = (
+				95CDFBAE2371CE900063CE62 /* AddCourse */,
 				95192E532367406400429B7C /* View */,
 				952D28CB23561F5C00D7C3DE /* MyCourseAssembler.swift */,
 				952D28CD23561F7D00D7C3DE /* MyCourseNavigator.swift */,
@@ -319,6 +325,7 @@
 				9554E4892361F985001EF0A2 /* LaunchScreen.storyboard */,
 				9554E48B2361F985001EF0A2 /* Login.storyboard */,
 				9554E48C2361F985001EF0A2 /* Main.storyboard */,
+				95CDFBB32371D0410063CE62 /* Popup.storyboard */,
 				9554E48D2361F985001EF0A2 /* Storyboards.swift */,
 			);
 			path = Storyboards;
@@ -393,6 +400,14 @@
 			path = ESTabBar;
 			sourceTree = "<group>";
 		};
+		95CDFBAE2371CE900063CE62 /* AddCourse */ = {
+			isa = PBXGroup;
+			children = (
+				95CDFBB12371CF030063CE62 /* AddCourseViewController.swift */,
+			);
+			path = AddCourse;
+			sourceTree = "<group>";
+		};
 		95CF9153236C8A0B009DF7E5 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +439,7 @@
 		95EED1A823536C2E003F6E7A /* Checkin-Student */ = {
 			isa = PBXGroup;
 			children = (
+				951B476D236F40F300923F2C /* Checkin-Student.entitlements */,
 				95EED2F323538B4B003F6E7A /* Assembler */,
 				9554E4922361FE58001EF0A2 /* Platform */,
 				95EED2FF23538B4B003F6E7A /* Domain */,
@@ -619,6 +635,14 @@
 					95EED1A523536C2E003F6E7A = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					95EED1B923536C32003F6E7A = {
 						CreatedOnToolsVersion = 10.1;
@@ -653,6 +677,7 @@
 				95EED1B123536C32003F6E7A /* Assets.xcassets in Resources */,
 				95EED37923538B4C003F6E7A /* EmptyDataView.xib in Resources */,
 				95192E572367410C00429B7C /* MyCourseCollectionViewCell.xib in Resources */,
+				95CDFBB42371D0410063CE62 /* Popup.storyboard in Resources */,
 				9554E48F2361F985001EF0A2 /* Login.storyboard in Resources */,
 				9554E4902361F986001EF0A2 /* Main.storyboard in Resources */,
 				95AB68ED2360B217003C1137 /* face-scanning.json in Resources */,
@@ -815,6 +840,7 @@
 				952D28DE23562B0400D7C3DE /* AccountViewModel.swift in Sources */,
 				95EED37523538B4C003F6E7A /* AppNavigator.swift in Sources */,
 				9554E4792361F45E001EF0A2 /* UISearchBar+.swift in Sources */,
+				95CDFBB22371CF030063CE62 /* AddCourseViewController.swift in Sources */,
 				95192E562367410C00429B7C /* MyCourseCollectionViewCell.swift in Sources */,
 				952D28C32356192200D7C3DE /* CheckinNavigator.swift in Sources */,
 				9554E4812361F45E001EF0A2 /* UIViewController+Rx.swift in Sources */,
@@ -988,6 +1014,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Checkin-Student/Checkin-Student.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96F2ZQ3PBH;
 				INFOPLIST_FILE = "Checkin-Student/Info.plist";
@@ -995,8 +1023,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cuonghx.Checkin-Student";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honghaiFCM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Checkin-Student/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1010,6 +1039,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Checkin-Student/Checkin-Student.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96F2ZQ3PBH;
 				INFOPLIST_FILE = "Checkin-Student/Info.plist";
@@ -1017,8 +1048,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cuonghx.Checkin-Student";
+				PRODUCT_BUNDLE_IDENTIFIER = com.honghaiFCM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Checkin-Student/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
