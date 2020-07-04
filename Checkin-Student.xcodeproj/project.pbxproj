@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9502706E2472D306001E5D2C /* API+GetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502706D2472D306001E5D2C /* API+GetProfile.swift */; };
+		950270702472E7E6001E5D2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9502706F2472E7E5001E5D2C /* GoogleService-Info.plist */; };
+		950270CF24741720001E5D2C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950270CE24741720001E5D2C /* Utils.swift */; };
+		950270D824741799001E5D2C /* FaceNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950270D124741799001E5D2C /* FaceNet.swift */; };
+		950270D924741799001E5D2C /* modelFacenet.pb in Resources */ = {isa = PBXBuildFile; fileRef = 950270D324741799001E5D2C /* modelFacenet.pb */; };
+		950270DA24741799001E5D2C /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 950270D424741799001E5D2C /* tensorflow_utils.mm */; };
+		950270DB24741799001E5D2C /* tfWrap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 950270D724741799001E5D2C /* tfWrap.mm */; };
+		950270DD24742863001E5D2C /* CheckinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950270DC24742863001E5D2C /* CheckinRepository.swift */; };
+		950270DF24742993001E5D2C /* API+Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950270DE24742993001E5D2C /* API+Checkin.swift */; };
+		950270E224743BAB001E5D2C /* ChatLogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950270E124743BAB001E5D2C /* ChatLogCollectionViewController.swift */; };
+		950270E424743D85001E5D2C /* ChatBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950270E324743D85001E5D2C /* ChatBox.storyboard */; };
 		950F48FF2369E53D00FA6C53 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F48FE2369E53C00FA6C53 /* ValidationError.swift */; };
 		950F49012369F18200FA6C53 /* API+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F49002369F18200FA6C53 /* API+Login.swift */; };
 		950F49042369F38300FA6C53 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F49032369F38300FA6C53 /* Student.swift */; };
@@ -14,6 +25,7 @@
 		950F490A2369F9D300FA6C53 /* RepositoriesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950F49092369F9D300FA6C53 /* RepositoriesAssembler.swift */; };
 		95192E562367410C00429B7C /* MyCourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95192E542367410C00429B7C /* MyCourseCollectionViewCell.swift */; };
 		95192E572367410C00429B7C /* MyCourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95192E552367410C00429B7C /* MyCourseCollectionViewCell.xib */; };
+		952A29AB23747BE6000A5C54 /* ConfirmAddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A29AA23747BE6000A5C54 /* ConfirmAddCourseViewController.swift */; };
 		952D28B52356174A00D7C3DE /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28B42356174A00D7C3DE /* LoginAssembler.swift */; };
 		952D28B72356175600D7C3DE /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28B62356175600D7C3DE /* LoginNavigator.swift */; };
 		952D28B92356176200D7C3DE /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28B82356176200D7C3DE /* LoginUseCase.swift */; };
@@ -33,6 +45,8 @@
 		952D28DA23562AB400D7C3DE /* AccountNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28D923562AB400D7C3DE /* AccountNavigator.swift */; };
 		952D28DC23562AF200D7C3DE /* AccountUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28DB23562AF200D7C3DE /* AccountUseCase.swift */; };
 		952D28DE23562B0400D7C3DE /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952D28DD23562B0400D7C3DE /* AccountViewModel.swift */; };
+		9541976C2478D8BF00AB15A8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541976B2478D8BF00AB15A8 /* Double+.swift */; };
+		9541976E247ACDD100AB15A8 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541976D247ACDD100AB15A8 /* AssetManager.swift */; };
 		954BCB75236ECB9D00855560 /* API+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB74236ECB9D00855560 /* API+Register.swift */; };
 		954BCB77236ECDAF00855560 /* API+UpdateUserInfor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB76236ECDAF00855560 /* API+UpdateUserInfor.swift */; };
 		954BCB79236ECF3C00855560 /* API+Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BCB78236ECF3C00855560 /* API+Courses.swift */; };
@@ -57,7 +71,6 @@
 		9554E4812361F45E001EF0A2 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E46C2361F45C001EF0A2 /* UIViewController+Rx.swift */; };
 		9554E4822361F45E001EF0A2 /* ViewModelType+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E46D2361F45C001EF0A2 /* ViewModelType+.swift */; };
 		9554E4832361F45E001EF0A2 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E46E2361F45D001EF0A2 /* UIAlertController+.swift */; };
-		9554E48E2361F985001EF0A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9554E4892361F985001EF0A2 /* LaunchScreen.storyboard */; };
 		9554E48F2361F985001EF0A2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9554E48B2361F985001EF0A2 /* Login.storyboard */; };
 		9554E4902361F986001EF0A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9554E48C2361F985001EF0A2 /* Main.storyboard */; };
 		9554E4912361F986001EF0A2 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E48D2361F985001EF0A2 /* Storyboards.swift */; };
@@ -66,6 +79,7 @@
 		9554E4A12361FE58001EF0A2 /* APIOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E49B2361FE58001EF0A2 /* APIOutput.swift */; };
 		9554E4A22361FE58001EF0A2 /* APISevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E49C2361FE58001EF0A2 /* APISevice.swift */; };
 		9554E4A32361FE58001EF0A2 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554E49D2361FE58001EF0A2 /* APIUrls.swift */; };
+		956466CF2375DC7800C43EBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9554E4892361F985001EF0A2 /* LaunchScreen.storyboard */; };
 		95AB68E92360ADB1003C1137 /* AnimateBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68E82360ADB1003C1137 /* AnimateBasicContentView.swift */; };
 		95AB68EB2360AE25003C1137 /* AnimationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB68EA2360AE25003C1137 /* AnimationContentView.swift */; };
 		95AB68ED2360B217003C1137 /* face-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AB68EC2360B216003C1137 /* face-scanning.json */; };
@@ -112,6 +126,19 @@
 		35EE3FBE6F5645B51108B238 /* Pods-Checkin-Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkin-Student.release.xcconfig"; path = "Target Support Files/Pods-Checkin-Student/Pods-Checkin-Student.release.xcconfig"; sourceTree = "<group>"; };
 		43A0381759E0A77F6EE2671E /* Pods_Checkin_Student.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checkin_Student.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2631CC42B6B6728185AFF7 /* Pods-Checkin-Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checkin-Student.debug.xcconfig"; path = "Target Support Files/Pods-Checkin-Student/Pods-Checkin-Student.debug.xcconfig"; sourceTree = "<group>"; };
+		9502706D2472D306001E5D2C /* API+GetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+GetProfile.swift"; sourceTree = "<group>"; };
+		9502706F2472E7E5001E5D2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		950270CE24741720001E5D2C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		950270D124741799001E5D2C /* FaceNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceNet.swift; sourceTree = "<group>"; };
+		950270D324741799001E5D2C /* modelFacenet.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = modelFacenet.pb; sourceTree = "<group>"; };
+		950270D424741799001E5D2C /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
+		950270D524741799001E5D2C /* tfWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tfWrap.h; sourceTree = "<group>"; };
+		950270D624741799001E5D2C /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
+		950270D724741799001E5D2C /* tfWrap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tfWrap.mm; sourceTree = "<group>"; };
+		950270DC24742863001E5D2C /* CheckinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinRepository.swift; sourceTree = "<group>"; };
+		950270DE24742993001E5D2C /* API+Checkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Checkin.swift"; sourceTree = "<group>"; };
+		950270E124743BAB001E5D2C /* ChatLogCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogCollectionViewController.swift; sourceTree = "<group>"; };
+		950270E324743D85001E5D2C /* ChatBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatBox.storyboard; sourceTree = "<group>"; };
 		950F48FE2369E53C00FA6C53 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		950F49002369F18200FA6C53 /* API+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Login.swift"; sourceTree = "<group>"; };
 		950F49032369F38300FA6C53 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -120,6 +147,7 @@
 		95192E542367410C00429B7C /* MyCourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCollectionViewCell.swift; sourceTree = "<group>"; };
 		95192E552367410C00429B7C /* MyCourseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCourseCollectionViewCell.xib; sourceTree = "<group>"; };
 		951B476D236F40F300923F2C /* Checkin-Student.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Checkin-Student.entitlements"; sourceTree = "<group>"; };
+		952A29AA23747BE6000A5C54 /* ConfirmAddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAddCourseViewController.swift; sourceTree = "<group>"; };
 		952D28B42356174A00D7C3DE /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		952D28B62356175600D7C3DE /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		952D28B82356176200D7C3DE /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
@@ -139,6 +167,8 @@
 		952D28D923562AB400D7C3DE /* AccountNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNavigator.swift; sourceTree = "<group>"; };
 		952D28DB23562AF200D7C3DE /* AccountUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUseCase.swift; sourceTree = "<group>"; };
 		952D28DD23562B0400D7C3DE /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		9541976B2478D8BF00AB15A8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
+		9541976D247ACDD100AB15A8 /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		954BCB74236ECB9D00855560 /* API+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Register.swift"; sourceTree = "<group>"; };
 		954BCB76236ECDAF00855560 /* API+UpdateUserInfor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+UpdateUserInfor.swift"; sourceTree = "<group>"; };
 		954BCB78236ECF3C00855560 /* API+Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Courses.swift"; sourceTree = "<group>"; };
@@ -237,6 +267,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		950270D024741799001E5D2C /* Tensorflow */ = {
+			isa = PBXGroup;
+			children = (
+				950270D124741799001E5D2C /* FaceNet.swift */,
+				950270D224741799001E5D2C /* Graph */,
+				950270D424741799001E5D2C /* tensorflow_utils.mm */,
+				950270D524741799001E5D2C /* tfWrap.h */,
+				950270D624741799001E5D2C /* tensorflow_utils.h */,
+				950270D724741799001E5D2C /* tfWrap.mm */,
+			);
+			path = Tensorflow;
+			sourceTree = "<group>";
+		};
+		950270D224741799001E5D2C /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				950270D324741799001E5D2C /* modelFacenet.pb */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		950270E024743B87001E5D2C /* ChatBox */ = {
+			isa = PBXGroup;
+			children = (
+				950270E124743BAB001E5D2C /* ChatLogCollectionViewController.swift */,
+			);
+			path = ChatBox;
+			sourceTree = "<group>";
+		};
 		950F49022369F1CE00FA6C53 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +304,8 @@
 				954BCB74236ECB9D00855560 /* API+Register.swift */,
 				954BCB76236ECDAF00855560 /* API+UpdateUserInfor.swift */,
 				954BCB78236ECF3C00855560 /* API+Courses.swift */,
+				9502706D2472D306001E5D2C /* API+GetProfile.swift */,
+				950270DE24742993001E5D2C /* API+Checkin.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -327,6 +388,7 @@
 				9554E48C2361F985001EF0A2 /* Main.storyboard */,
 				95CDFBB32371D0410063CE62 /* Popup.storyboard */,
 				9554E48D2361F985001EF0A2 /* Storyboards.swift */,
+				950270E324743D85001E5D2C /* ChatBox.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -348,6 +410,7 @@
 				950F49072369F58E00FA6C53 /* UserRepository.swift */,
 				950F49092369F9D300FA6C53 /* RepositoriesAssembler.swift */,
 				954BCB7C236ED82400855560 /* CourseRepository.swift */,
+				950270DC24742863001E5D2C /* CheckinRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -404,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				95CDFBB12371CF030063CE62 /* AddCourseViewController.swift */,
+				952A29AA23747BE6000A5C54 /* ConfirmAddCourseViewController.swift */,
 			);
 			path = AddCourse;
 			sourceTree = "<group>";
@@ -439,6 +503,7 @@
 		95EED1A823536C2E003F6E7A /* Checkin-Student */ = {
 			isa = PBXGroup;
 			children = (
+				9502706F2472E7E5001E5D2C /* GoogleService-Info.plist */,
 				951B476D236F40F300923F2C /* Checkin-Student.entitlements */,
 				95EED2F323538B4B003F6E7A /* Assembler */,
 				9554E4922361FE58001EF0A2 /* Platform */,
@@ -476,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				9554E4642361F45B001EF0A2 /* Date+.swift */,
+				9541976B2478D8BF00AB15A8 /* Double+.swift */,
 				9554E4612361F45A001EF0A2 /* Observable+.swift */,
 				9554E4672361F45C001EF0A2 /* Rx */,
 				9554E4592361F455001EF0A2 /* String+.swift */,
@@ -515,6 +581,7 @@
 		95EED30723538B4B003F6E7A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				950270E024743B87001E5D2C /* ChatBox */,
 				952D28D523562A8800D7C3DE /* Account */,
 				952D28CA23561F3900D7C3DE /* MyCourse */,
 				952D28BE235618CC00D7C3DE /* Checkin */,
@@ -563,8 +630,11 @@
 		95EED34E23538B4C003F6E7A /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				9541976D247ACDD100AB15A8 /* AssetManager.swift */,
+				950270D024741799001E5D2C /* Tensorflow */,
 				95EED34F23538B4C003F6E7A /* Constants.swift */,
 				95EED35023538B4C003F6E7A /* Keys.swift */,
+				950270CE24741720001E5D2C /* Utils.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -674,14 +744,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956466CF2375DC7800C43EBB /* LaunchScreen.storyboard in Resources */,
 				95EED1B123536C32003F6E7A /* Assets.xcassets in Resources */,
+				950270702472E7E6001E5D2C /* GoogleService-Info.plist in Resources */,
+				950270E424743D85001E5D2C /* ChatBox.storyboard in Resources */,
+				950270D924741799001E5D2C /* modelFacenet.pb in Resources */,
 				95EED37923538B4C003F6E7A /* EmptyDataView.xib in Resources */,
 				95192E572367410C00429B7C /* MyCourseCollectionViewCell.xib in Resources */,
 				95CDFBB42371D0410063CE62 /* Popup.storyboard in Resources */,
 				9554E48F2361F985001EF0A2 /* Login.storyboard in Resources */,
 				9554E4902361F986001EF0A2 /* Main.storyboard in Resources */,
 				95AB68ED2360B217003C1137 /* face-scanning.json in Resources */,
-				9554E48E2361F985001EF0A2 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,8 +855,10 @@
 			files = (
 				952D28D023561F9000D7C3DE /* MyCourseUseCase.swift in Sources */,
 				95EED36323538B4C003F6E7A /* UnitTestViewController.swift in Sources */,
+				950270DA24741799001E5D2C /* tensorflow_utils.mm in Sources */,
 				95AB68E92360ADB1003C1137 /* AnimateBasicContentView.swift in Sources */,
 				9554E4A02361FE58001EF0A2 /* APIInput.swift in Sources */,
+				952A29AB23747BE6000A5C54 /* ConfirmAddCourseViewController.swift in Sources */,
 				95EED38E23538B4C003F6E7A /* MainViewController.swift in Sources */,
 				950F48FF2369E53D00FA6C53 /* ValidationError.swift in Sources */,
 				9554E4A22361FE58001EF0A2 /* APISevice.swift in Sources */,
@@ -795,6 +870,7 @@
 				952D28DA23562AB400D7C3DE /* AccountNavigator.swift in Sources */,
 				952D28C12356191800D7C3DE /* CheckinAssembler.swift in Sources */,
 				9554E4782361F45E001EF0A2 /* UIApplication+.swift in Sources */,
+				950270DB24741799001E5D2C /* tfWrap.mm in Sources */,
 				952D28B72356175600D7C3DE /* LoginNavigator.swift in Sources */,
 				95EED38D23538B4C003F6E7A /* MainUseCase.swift in Sources */,
 				952D28D423561FB500D7C3DE /* MyCourseViewController.swift in Sources */,
@@ -803,10 +879,13 @@
 				95EED3AC23538B4C003F6E7A /* Constants.swift in Sources */,
 				9554E4A12361FE58001EF0A2 /* APIOutput.swift in Sources */,
 				9554E4772361F45E001EF0A2 /* Observable+.swift in Sources */,
+				9502706E2472D306001E5D2C /* API+GetProfile.swift in Sources */,
 				9554E4762361F45E001EF0A2 /* UIProgressView+.swift in Sources */,
 				952D28BD2356178300D7C3DE /* LoginViewController.swift in Sources */,
 				9554E47F2361F45E001EF0A2 /* UITableView+Rx.swift in Sources */,
 				950F49042369F38300FA6C53 /* Student.swift in Sources */,
+				950270DF24742993001E5D2C /* API+Checkin.swift in Sources */,
+				9541976E247ACDD100AB15A8 /* AssetManager.swift in Sources */,
 				95EED38B23538B4C003F6E7A /* MainAssembler.swift in Sources */,
 				9554E4732361F45E001EF0A2 /* UILabel+.swift in Sources */,
 				9554E4832361F45E001EF0A2 /* UIAlertController+.swift in Sources */,
@@ -833,15 +912,19 @@
 				954BCB79236ECF3C00855560 /* API+Courses.swift in Sources */,
 				95EED37723538B4C003F6E7A /* AppViewModel.swift in Sources */,
 				95AB68EF2360B4AA003C1137 /* AccountViewController.swift in Sources */,
+				950270D824741799001E5D2C /* FaceNet.swift in Sources */,
+				950270CF24741720001E5D2C /* Utils.swift in Sources */,
 				95EED36423538B4C003F6E7A /* Assembler.swift in Sources */,
 				9554E47C2361F45E001EF0A2 /* UIFont+.swift in Sources */,
 				952D28B52356174A00D7C3DE /* LoginAssembler.swift in Sources */,
 				950F49082369F58E00FA6C53 /* UserRepository.swift in Sources */,
 				952D28DE23562B0400D7C3DE /* AccountViewModel.swift in Sources */,
+				950270E224743BAB001E5D2C /* ChatLogCollectionViewController.swift in Sources */,
 				95EED37523538B4C003F6E7A /* AppNavigator.swift in Sources */,
 				9554E4792361F45E001EF0A2 /* UISearchBar+.swift in Sources */,
 				95CDFBB22371CF030063CE62 /* AddCourseViewController.swift in Sources */,
 				95192E562367410C00429B7C /* MyCourseCollectionViewCell.swift in Sources */,
+				9541976C2478D8BF00AB15A8 /* Double+.swift in Sources */,
 				952D28C32356192200D7C3DE /* CheckinNavigator.swift in Sources */,
 				9554E4812361F45E001EF0A2 /* UIViewController+Rx.swift in Sources */,
 				9554E4822361F45E001EF0A2 /* ViewModelType+.swift in Sources */,
@@ -849,6 +932,7 @@
 				95EED37623538B4C003F6E7A /* AppUseCase.swift in Sources */,
 				95EED3AD23538B4C003F6E7A /* Keys.swift in Sources */,
 				952D28CC23561F5C00D7C3DE /* MyCourseAssembler.swift in Sources */,
+				950270DD24742863001E5D2C /* CheckinRepository.swift in Sources */,
 				95EED38F23538B4C003F6E7A /* MainViewModel.swift in Sources */,
 				952D28B92356176200D7C3DE /* LoginUseCase.swift in Sources */,
 				954BCB7D236ED82400855560 /* CourseRepository.swift in Sources */,
@@ -1064,6 +1148,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96F2ZQ3PBH;
 				INFOPLIST_FILE = "Checkin-StudentTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1085,6 +1170,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96F2ZQ3PBH;
 				INFOPLIST_FILE = "Checkin-StudentTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

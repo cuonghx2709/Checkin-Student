@@ -11,8 +11,10 @@ protocol MyCourseUseCaseType {
     func getStudent() -> Observable<Student>
     func getTotalCourse(courses: [Course]) -> String
     func getName(student: Student)  -> String
-    func unrollCourse(course: Course) -> Observable<Bool>
+    func unrollCourse(courseId: Int, studentId: Int) -> Observable<Void>
     func unrollCourse(courseUnrolled: Course, courses: [Course]) -> [Course]
+    func enrollCourse(courseId: Int, studentId: Int) -> Observable<Void>
+    func enrollCourse(courseEnrolled: Course, courses: [Course]) -> [Course]
 }
 
 struct MyCourseUseCase: MyCourseUseCaseType {
@@ -39,11 +41,25 @@ struct MyCourseUseCase: MyCourseUseCaseType {
         return student.name
     }
     
-    func unrollCourse(course: Course) -> Observable<Bool> {
-        return courseRepo.unrollCourse(courseId: course.id)
+    func unrollCourse(courseId: Int, studentId: Int) -> Observable<Void> {
+        return courseRepo.unrollCourse(courseId: courseId, studentId: studentId)
     }
     
     func unrollCourse(courseUnrolled: Course, courses: [Course]) -> [Course] {
         return courses.filter { $0.id != courseUnrolled.id }
+    }
+    
+    func enrollCourse(courseId: Int, studentId: Int) -> Observable<Void> {
+        return courseRepo.enrollCourse(courseId: courseId, studentId: studentId)
+    }
+    
+    func enrollCourse(courseEnrolled: Course, courses: [Course]) -> [Course] {
+        let constainsCourse = courses.contains { $0.id == courseEnrolled.id }
+        guard !constainsCourse else {
+            return courses
+        }
+        var courseCopy = courses
+        courseCopy.append(courseEnrolled)
+        return courseCopy
     }
 }

@@ -17,13 +17,160 @@
                     <view key="view" contentMode="scaleToFill" id="bQk-c1-vUa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-W7-EP3">
+                                <rect key="frame" x="0.0" y="60" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hãy nhập Code của môn học :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSX-YR-Tq0">
+                                        <rect key="frame" x="16" y="9" width="382" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVp-qP-gdf">
+                                        <rect key="frame" x="32" y="32" width="350" height="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h59-7D-LbE">
+                                        <rect key="frame" x="32" y="56" width="350" height="1"/>
+                                        <color key="backgroundColor" red="0.23921568630000001" green="0.80784313730000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.75" id="XMg-Zj-4YA"/>
+                                        </constraints>
+                                    </view>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khoá học không tồn tại" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIu-zD-yS2">
+                                        <rect key="frame" x="146.5" y="65" width="121" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CSX-YR-Tq0" secondAttribute="trailing" constant="16" id="64o-6Q-yuo"/>
+                                    <constraint firstItem="fIu-zD-yS2" firstAttribute="centerX" secondItem="t3Z-W7-EP3" secondAttribute="centerX" id="6g0-I6-rU2"/>
+                                    <constraint firstItem="h59-7D-LbE" firstAttribute="top" secondItem="hVp-qP-gdf" secondAttribute="bottom" constant="7" id="8C0-cK-Sas"/>
+                                    <constraint firstItem="fIu-zD-yS2" firstAttribute="top" secondItem="h59-7D-LbE" secondAttribute="bottom" constant="8" id="E3g-1c-haP"/>
+                                    <constraint firstItem="hVp-qP-gdf" firstAttribute="leading" secondItem="t3Z-W7-EP3" secondAttribute="leading" constant="32" id="L2w-Sm-pAZ"/>
+                                    <constraint firstItem="CSX-YR-Tq0" firstAttribute="centerY" secondItem="t3Z-W7-EP3" secondAttribute="centerY" multiplier="0.4" id="PIX-a8-8Gy"/>
+                                    <constraint firstItem="CSX-YR-Tq0" firstAttribute="leading" secondItem="t3Z-W7-EP3" secondAttribute="leading" constant="16" id="WeU-7e-QS2"/>
+                                    <constraint firstAttribute="trailing" secondItem="hVp-qP-gdf" secondAttribute="trailing" constant="32" id="fSe-9C-Zar"/>
+                                    <constraint firstAttribute="trailing" secondItem="h59-7D-LbE" secondAttribute="trailing" constant="32" id="k8H-3Y-aBC"/>
+                                    <constraint firstItem="CSX-YR-Tq0" firstAttribute="top" secondItem="t3Z-W7-EP3" secondAttribute="top" constant="9" id="owx-tV-0ox"/>
+                                    <constraint firstItem="h59-7D-LbE" firstAttribute="leading" secondItem="t3Z-W7-EP3" secondAttribute="leading" constant="32" id="sPe-5I-dbC"/>
+                                    <constraint firstItem="hVp-qP-gdf" firstAttribute="top" secondItem="CSX-YR-Tq0" secondAttribute="bottom" constant="5" id="vPU-a0-YLk"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24z-ir-poN">
+                                <rect key="frame" x="103.5" y="166" width="207" height="32"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.80784313730000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Tiếp tục">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t3Z-W7-EP3" firstAttribute="centerX" secondItem="Ooh-hL-O4s" secondAttribute="centerX" id="DFP-Ho-6Od"/>
+                            <constraint firstItem="24z-ir-poN" firstAttribute="centerX" secondItem="Ooh-hL-O4s" secondAttribute="centerX" id="P3y-ta-2ID"/>
+                            <constraint firstItem="24z-ir-poN" firstAttribute="width" secondItem="bQk-c1-vUa" secondAttribute="width" multiplier="0.5" id="VUT-Cf-Wqu"/>
+                            <constraint firstItem="24z-ir-poN" firstAttribute="top" secondItem="t3Z-W7-EP3" secondAttribute="bottom" constant="16" id="qdV-3J-MK9"/>
+                            <constraint firstItem="t3Z-W7-EP3" firstAttribute="top" secondItem="Ooh-hL-O4s" secondAttribute="top" constant="16" id="ubX-5d-GPu"/>
+                            <constraint firstItem="t3Z-W7-EP3" firstAttribute="width" secondItem="bQk-c1-vUa" secondAttribute="width" id="vps-D9-Ey3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ooh-hL-O4s"/>
                     </view>
+                    <connections>
+                        <outlet property="codeTextField" destination="hVp-qP-gdf" id="G2j-De-BNH"/>
+                        <outlet property="continueButton" destination="24z-ir-poN" id="AFo-qx-56N"/>
+                        <outlet property="lineLabel" destination="h59-7D-LbE" id="QsR-xE-iMk"/>
+                        <outlet property="messageLabel" destination="fIu-zD-yS2" id="XzX-sM-zhB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GW1-u2-3eU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-496" y="153"/>
+        </scene>
+        <!--Confirm Add Course View Controller-->
+        <scene sceneID="BhW-g5-qTA">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmAddCourseViewController" id="i5h-pD-ahh" customClass="ConfirmAddCourseViewController" customModule="Checkin_Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HGY-LA-Cbz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpY-y7-ZQJ">
+                                <rect key="frame" x="0.0" y="60" width="414" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn có muốn tham gia khoá học:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFc-co-eUf">
+                                        <rect key="frame" x="16" y="9" width="382" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABCDEF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylp-DU-pqZ">
+                                        <rect key="frame" x="16" y="64" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ylp-DU-pqZ" firstAttribute="leading" secondItem="EpY-y7-ZQJ" secondAttribute="leading" constant="16" id="3dP-4Z-ATl"/>
+                                    <constraint firstItem="Ylp-DU-pqZ" firstAttribute="centerX" secondItem="EpY-y7-ZQJ" secondAttribute="centerX" id="8ld-Ns-hwp"/>
+                                    <constraint firstItem="MFc-co-eUf" firstAttribute="top" secondItem="EpY-y7-ZQJ" secondAttribute="top" constant="9" id="PS3-2G-db0"/>
+                                    <constraint firstAttribute="trailing" secondItem="MFc-co-eUf" secondAttribute="trailing" constant="16" id="YGA-Qa-LRV"/>
+                                    <constraint firstItem="MFc-co-eUf" firstAttribute="centerY" secondItem="EpY-y7-ZQJ" secondAttribute="centerY" multiplier="0.4" id="aRv-hZ-oQ4"/>
+                                    <constraint firstItem="MFc-co-eUf" firstAttribute="leading" secondItem="EpY-y7-ZQJ" secondAttribute="leading" constant="16" id="apo-b4-w2O"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ylp-DU-pqZ" secondAttribute="trailing" constant="16" id="qBX-Ro-k2n"/>
+                                    <constraint firstItem="Ylp-DU-pqZ" firstAttribute="top" secondItem="MFc-co-eUf" secondAttribute="bottom" constant="37" id="zaX-LW-beM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDw-f4-Ocj">
+                                <rect key="frame" x="103.5" y="166" width="207" height="32"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.80784313730000001" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Tiếp tục">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="handlerContinueButton:" destination="i5h-pD-ahh" eventType="touchUpInside" id="S5M-3H-ou7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gDw-f4-Ocj" firstAttribute="top" secondItem="EpY-y7-ZQJ" secondAttribute="bottom" constant="16" id="Duk-YC-PEN"/>
+                            <constraint firstItem="EpY-y7-ZQJ" firstAttribute="top" secondItem="FIj-ya-F6g" secondAttribute="top" constant="16" id="Mkj-cn-ptD"/>
+                            <constraint firstItem="EpY-y7-ZQJ" firstAttribute="centerX" secondItem="FIj-ya-F6g" secondAttribute="centerX" id="Ozl-cq-nER"/>
+                            <constraint firstItem="gDw-f4-Ocj" firstAttribute="centerX" secondItem="FIj-ya-F6g" secondAttribute="centerX" id="RCf-78-rze"/>
+                            <constraint firstItem="EpY-y7-ZQJ" firstAttribute="width" secondItem="HGY-LA-Cbz" secondAttribute="width" id="UyU-9T-ARx"/>
+                            <constraint firstItem="gDw-f4-Ocj" firstAttribute="width" secondItem="HGY-LA-Cbz" secondAttribute="width" multiplier="0.5" id="vcO-dJ-TQz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FIj-ya-F6g"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="gDw-f4-Ocj" id="i0I-YS-J7J"/>
+                        <outlet property="courseNameLabel" destination="Ylp-DU-pqZ" id="DDN-ra-yXz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxV-ja-37e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="153"/>
         </scene>
     </scenes>
 </document>

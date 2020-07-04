@@ -34,6 +34,7 @@ final class AnimationContentView: AnimateBasicContentView {
         super.updateLayout()
         lottieView.frame = self.bounds.insetBy(dx: 0, dy: 0)
         lottieView.play()
+        lottieView.backgroundBehavior = .pauseAndRestore
     }
     
     override func selectAnimation(animated: Bool, completion: (() -> ())?) {

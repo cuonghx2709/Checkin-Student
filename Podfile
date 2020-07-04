@@ -43,9 +43,17 @@ def pods
   pod 'Toaster'
   pod 'KUIPopOver'
   pod 'MessengerKit'
+  pod 'ImagePicker'
+  pod 'Firebase/Database'
+  pod 'Firebase/Messaging'
+  pod 'Firebase'
+  pod 'Firebase/Storage'
   
   # Keychain
   pod 'SwiftKeychainWrapper', '3.2'
+  
+  # TensorFlow
+  pod 'TensorFlow-experimental'
   
 end
 

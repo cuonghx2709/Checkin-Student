@@ -50,18 +50,25 @@ final class MyCourseViewController: UIViewController, BindableType {
     
     override func viewWillLayoutSubviews() {
         super.updateViewConstraints()
-        collectionViewHeight.constant = collectionView.contentSize.height
+        collectionViewHeight.constant = max(collectionView.contentSize.height, UIScreen.main.bounds.height * 0.6)
     }
 
     // MARK: - Methods
     
     func bindViewModel() {
+        
+        let addCourseTrigger = NotificationCenter.default.rx
+            .notification(Notification.Name(Constants.keyNotificationAddCourse))
+            .asObservable()
+            .map { $0.userInfo?["course"] as? Course }
+            .asDriverOnErrorJustComplete()
+        
         let input = MyCourseViewModel.Input(
             loadTrigger: Driver.just(()),
             refreshTrigger: refreshControl.rx.controlEvent(.valueChanged).asDriver(),
             checkinTrigger: checkinButton.rx.tap.asDriver(),
             myAccountTrigger: myAccountButton.rx.tap.asDriver(),
-            addCourseTrigger: addButton.rx.tap.asDriver(),
+            addCourseTrigger: addCourseTrigger.asDriver(),
             menuCourse: showMenuTrigger.asDriverOnErrorJustComplete()
         )
         
@@ -96,7 +103,7 @@ final class MyCourseViewController: UIViewController, BindableType {
             .drive(totalCourseLabel.rx.text)
             .disposed(by: rx.disposeBag)
         
-        output.isLoading
+        output.isLoading.map { _ in false }
             .drive(refreshControl.rx.isRefreshing)
             .disposed(by: rx.disposeBag)
         
@@ -115,7 +122,10 @@ final class MyCourseViewController: UIViewController, BindableType {
             .setDelegate(self)
             .disposed(by: rx.disposeBag)
         scrollView.addSubview(refreshControl)
+        
+        collectionView.isScrollEnabled = true
     }
+    
     @IBAction func handlerAddAction(_ sender: UIButton) {
         let addCoursePopup = AddCourseViewController.instantiate()
         addCoursePopup.showPopoverWithNavigationController(

@@ -40,8 +40,8 @@ struct MyCourseNavigator: MyCourseNavigatorType {
     
     func showSheetAction(course: Course) -> Observable<CourseAction> {
         return Observable.create { obser in
-            let alert = UIAlertController(title: "ABCd",
-                                          message: "something",
+            let alert = UIAlertController(title: course.name,
+                                          message: nil,
                                           preferredStyle: .actionSheet)
                 .then {
                     $0.addAction(title:  CourseAction.Cancel.description,
@@ -90,7 +90,9 @@ struct MyCourseNavigator: MyCourseNavigatorType {
     }
     
     func showChatScreen(course: Course)  {
-        
+        let vc = ChatLogCollectionViewController.instantiate()
+        vc.courseID = course.id
+        navigation.pushViewController(vc, animated: true)
     }
     
     func showAddCoursePopup() {

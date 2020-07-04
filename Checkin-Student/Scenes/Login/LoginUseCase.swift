@@ -11,6 +11,7 @@ protocol LoginUseCaseType {
     func validate(password: String) -> ValidationResult
     func login(email: String, password: String) -> Observable<Student>
     func forgotPW(email: String) -> Observable<Bool>
+    func createAccountWith(email: String, password: String) -> Observable<Student>
 }
 
 struct LoginUseCase: LoginUseCaseType {
@@ -37,5 +38,9 @@ struct LoginUseCase: LoginUseCaseType {
     
     func forgotPW(email: String) -> Observable<Bool> {
         return userRepo.forgotPW(email: email)
+    }
+    
+    func createAccountWith(email: String, password: String) -> Observable<Student> {
+        return userRepo.signup(email: email, password: password)
     }
 }

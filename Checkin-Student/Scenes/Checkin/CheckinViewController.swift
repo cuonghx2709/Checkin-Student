@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
 fileprivate var framesQueue : DispatchQueue!
 private var CapturingStillImageContext = UnsafeMutableRawPointer.allocate(byteCount: 1, alignment: 128)
@@ -42,6 +43,14 @@ final class CheckinViewController: UIViewController, BindableType {
     var viewModel: CheckinViewModel!
     
     private let imageSuject = PublishSubject<CIImage>()
+    private let currentLocation = PublishSubject<(Double, Double)>()
+    private lazy var locationManager: CLLocationManager = {
+        let locationManager = CLLocationManager().then {
+            $0.requestAlwaysAuthorization()
+            $0.requestWhenInUseAuthorization()
+        }
+        return locationManager
+    }()
     
     deinit {
         logDeinit()
@@ -67,6 +76,7 @@ final class CheckinViewController: UIViewController, BindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
+        configLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,13 +89,38 @@ final class CheckinViewController: UIViewController, BindableType {
         stopCam()
     }
     
+     private func configLocation() {
+           if CLLocationManager.locationServicesEnabled() {
+               locationManager.do {
+                   $0.delegate = self
+                   $0.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                   $0.startUpdatingLocation()
+               }
+           } else {
+            showError(message: "GPS của bạn đã bị denied, Hãy cho phép GPS khi xử dụng app")
+           }
+       }
+    
     
     // MARK: - Methods
     func bindViewModel() {
         let input = CheckinViewModel.Input(
-            imageFrameTrigger: imageSuject.asDriverOnErrorJustComplete()
+            imageFrameTrigger: imageSuject.asDriverOnErrorJustComplete(),
+            loadTrigger: .just(()),
+            location: currentLocation.asDriverOnErrorJustComplete()
         )
-        let ouput = viewModel.transform(input)
+        let output = viewModel.transform(input)
+        
+        output.detectedImage
+            .drive()
+            .disposed(by: rx.disposeBag)
+        
+        output.currentVector
+            .drive()
+            .disposed(by: rx.disposeBag)
+        
+        output.error.drive(rx.error)
+            .disposed(by: rx.disposeBag)
     }
     
     private func configView() {
@@ -299,3 +334,21 @@ class WorldView: UIView {
         }
     }
 }
+
+// MARK: - CLLocationManagerDelegate
+extension CheckinViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        currentLocation.onNext((locValue.latitude, locValue.longitude))
+        print(locValue.latitude)
+        print(locValue.longitude)
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .denied {
+            showError(message: "GPS của bạn đã bị denied, Hãy cho phép GPS khi xử dụng app")
+        }
+    }
+}
+

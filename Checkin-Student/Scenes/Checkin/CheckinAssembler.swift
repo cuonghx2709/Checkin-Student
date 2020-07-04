@@ -33,6 +33,6 @@ extension CheckinAssembler where Self: DefaultAssembler {
     }
     
     func resolve() -> CheckinUseCaseType {
-        return CheckinUseCase()
+        return CheckinUseCase(facenet: FaceNet(), repo: resolve())
     }
 }

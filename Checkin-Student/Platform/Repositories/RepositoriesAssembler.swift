@@ -9,6 +9,7 @@
 protocol RepositoriesAssembler {
     func resolve() -> UserRepositoryType
     func resolve() -> CourseRepositoryType
+    func resolve() -> CheckinRepositoryType
 }
 
 extension RepositoriesAssembler where Self: DefaultAssembler {
@@ -18,5 +19,9 @@ extension RepositoriesAssembler where Self: DefaultAssembler {
     
     func resolve() -> CourseRepositoryType {
         return CourseRepository()
+    }
+    
+    func resolve() -> CheckinRepositoryType {
+        return CheckinRepository()
     }
 }

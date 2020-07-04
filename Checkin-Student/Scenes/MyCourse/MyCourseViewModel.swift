@@ -17,7 +17,7 @@ extension MyCourseViewModel: ViewModelType {
         var refreshTrigger: Driver<Void>
         var checkinTrigger: Driver<Void>
         var myAccountTrigger: Driver<Void>
-        var addCourseTrigger: Driver<Void>
+        var addCourseTrigger: Driver<Course?>
         var menuCourse: Driver<IndexPath>
     }
     
@@ -40,6 +40,7 @@ extension MyCourseViewModel: ViewModelType {
                                        input.refreshTrigger)
         
         let removeCourse = PublishSubject<Course>()
+        let addCourse = PublishSubject<Course>()
         
         let student = input.loadTrigger
             .flatMapLatest { _ in
@@ -57,9 +58,6 @@ extension MyCourseViewModel: ViewModelType {
                     .asDriverOnErrorJustComplete()
             }
         
-        let totalCourse = myCourses
-            .map { self.usecase.getTotalCourse(courses: $0) }
-        
         let name = loadTrigger
             .withLatestFrom(student)
             .map { self.usecase.getName(student: $0) }
@@ -69,8 +67,15 @@ extension MyCourseViewModel: ViewModelType {
             removeCourse.asDriverOnErrorJustComplete()
                 .withLatestFrom(myCourses) {
                     self.usecase.unrollCourse(courseUnrolled: $0, courses: $1)
-            }
+            },
+            addCourse.asDriverOnErrorJustComplete()
+                .withLatestFrom(myCourses) {
+                    self.usecase.enrollCourse(courseEnrolled: $0, courses: $1)
+                }
         )
+        
+        let totalCourse = courses
+            .map { self.usecase.getTotalCourse(courses: $0) }
         
         let menuCourse = input.menuCourse
             .withLatestFrom(courses) { $1[$0.row] }
@@ -86,13 +91,16 @@ extension MyCourseViewModel: ViewModelType {
                         case .Unroll:
                             return self.navigator.confirmUnroll(course: course)
                                 .filter { $0 }
-                                .flatMapLatest { _ in
-                                    self.usecase.unrollCourse(course: course)
+                                .flatMapLatest { _ -> Observable<Void> in
+                                    guard let student = AuthManager.authStudent else {
+                                        return .empty()
+                                    }
+                                    return self.usecase.unrollCourse(courseId: course.id, studentId: student.id)
                                         .trackError(errorTracker)
                                         .trackActivity(loadingActivity)
                                         .do(onNext: {
-                                            self.navigator.showResultUnroll(isSuccess: $0)
-                                            if $0 { removeCourse.onNext(course) }
+                                            self.navigator.showResultUnroll(isSuccess: true)
+                                            removeCourse.onNext(course)
                                         })
                                 }
                                 .mapToVoid()
@@ -114,9 +122,23 @@ extension MyCourseViewModel: ViewModelType {
             })
         
         let addCourese = input.addCourseTrigger
-            .do(onNext: { _ in
-                self.navigator.showAddCoursePopup()
-        })
+            .flatMapLatest { course -> Driver<Void> in
+                guard let `course` = course,
+                    let student = AuthManager.authStudent else {
+                    return .empty()
+                }
+                return self.usecase
+                    .enrollCourse(courseId: course.id, studentId: student.id)
+                    .trackError(errorTracker)
+                    .trackActivity(loadingActivity)
+                    .asDriverOnErrorJustComplete()
+            }
+            .withLatestFrom(input.addCourseTrigger)
+            .do(onNext: { course in
+                guard let `course` = course else { return }
+                addCourse.onNext(course)
+            })
+            .mapToVoid()
         
         let redirected = Driver.merge(toMyAccount, checkin, menuCourse, addCourese)
         

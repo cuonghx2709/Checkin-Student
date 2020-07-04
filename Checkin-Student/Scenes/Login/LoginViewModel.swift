@@ -58,14 +58,39 @@ extension LoginViewModel: ViewModelType {
             }
             .do(onNext: {
                 AuthManager.shared.setAuthStudent($0)
+            })
+            .do(onNext: {  _ in
                 self.navigator.toMain()
             })
             .mapToVoid()
         
-        let signUp = input.registerTrigger
-            .do(onNext: { _ in
-                self.navigator.toSignUpScreen()
+        let signUp = input.registerTrigger.withLatestFrom(validated)
+            .do(onNext: {
+                if !$0 {
+                    self.navigator.showMessageInput()
+                }
             })
+            .filter { $0 }
+            .withLatestFrom(input.emailText)
+            .flatMapLatest {
+                self.navigator.showConfirmSignUp(email: $0)
+                    .asDriverOnErrorJustComplete()
+            }
+            .filter { $0 }
+            .withLatestFrom(Driver.combineLatest(input.emailText, input.passwordText))
+            .flatMapLatest {
+                self.usecase.createAccountWith(email: $0.0, password: $0.1)
+                    .trackError(errorTracker)
+                    .trackActivity(activityTracker)
+                    .asDriverOnErrorJustComplete()
+            }
+            .do(onNext: {
+                AuthManager.shared.setAuthStudent($0)
+            })
+            .do(onNext: {  _ in
+                self.navigator.toMain()
+            })
+            .mapToVoid()
         
         let forgotPW = input.forgotTrigger
             .withLatestFrom(Driver.combineLatest(emailValidate, input.emailText))

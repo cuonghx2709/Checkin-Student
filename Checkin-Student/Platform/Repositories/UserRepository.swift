@@ -10,6 +10,8 @@ protocol UserRepositoryType {
     func login(email: String, password: String) -> Observable<Student>
     func forgotPW(email: String) -> Observable<Bool>
     func getUser() -> Observable<Student>
+    func signup(email: String, password: String) -> Observable<Student>
+    func updateUserInfor(student: Student) -> Observable<Void>
 }
 
 struct UserRepository: UserRepositoryType {
@@ -36,5 +38,37 @@ struct UserRepository: UserRepositoryType {
             return .error(APIExpiredTokenError())
         }
         return Observable.just(student)
+    }
+    
+    func signup(email: String, password: String) -> Observable<Student> {
+        let input = API.RegisterInput(email: email, password: password)
+        return API.shared.register(input)
+            .flatMapLatest { output -> Observable<Student> in
+                if output.statusCode == Constants.StatusCode.failCode {
+                    return .error(EmailExisted())
+                }
+                return self.getUser(id: output.studentId)
+            }
+    }
+    
+    func getUser(id: Int) -> Observable<Student> {
+        let input = API.ProfileInput(id: id)
+        return API.shared.getProfile(input)
+            .map { output in
+                guard let data = output.student else {
+                    throw WrongConvert()
+                }
+                return data
+            }
+    }
+    
+    func updateUserInfor(student: Student) -> Observable<Void> {
+        let input = API.UpdateProfileInput(student: student)
+        return API.shared.updateProfile(input)
+            .map { output -> Void in
+                if output.statusCode != Constants.StatusCode.successCode {
+                    throw UpdateFaile()
+                }
+            }
     }
 }

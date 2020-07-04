@@ -8,10 +8,14 @@
 
 extension API {
     enum Urls {
-        private static var apiBaseURL = "http://128.199.145.205:5050"
+        private static var apiBaseURL = "http://192.168.100.3:5050"
         static let loginAPI = apiBaseURL + "/login"
         static let forgotPwAPI = apiBaseURL + "/student/forgotpassword"
         static let student = apiBaseURL + "/student"
         static let enroll = apiBaseURL + "/enroll"
+        static let unroll = apiBaseURL + "/unroll"
+        static let course = apiBaseURL + "/course"
+        static let checkin = apiBaseURL + "/check_in"
+        static let message = apiBaseURL + "/message"
     }
 }

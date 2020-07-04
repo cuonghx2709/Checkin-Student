@@ -18,15 +18,14 @@ struct AppNavigator: AppNavigatorType {
     
     func toMain() {
         let nav = UINavigationController()
-        let mainVC: UIViewController
+        let rootVC: UIViewController
         if AuthManager.shared.isAuth {
             let loginedScreen: MainViewController = assembler.resolve(navController: nav)
-            mainVC = loginedScreen
+            nav.viewControllers.append(loginedScreen)
         } else {
             let loginScreen: LoginViewController = assembler.resolve(navController: nav)
-            mainVC = loginScreen
+            nav.viewControllers.append(loginScreen)
         }
-        nav.viewControllers = [mainVC]
         window.rootViewController = nav
     }
 }

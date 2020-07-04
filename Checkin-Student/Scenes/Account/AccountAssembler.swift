@@ -35,7 +35,7 @@ extension AccountAssembler where Self: DefaultAssembler {
     }
     
     func resolve() -> AccountUseCaseType {
-        return AccountUseCase()
+        return AccountUseCase(facenet: FaceNet(), repo: resolve())
     }
 }
 
